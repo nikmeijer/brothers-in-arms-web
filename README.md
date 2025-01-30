@@ -1,5 +1,9 @@
 # Brothers In Arm Memorials
-
+• Raise awareness for the Brothers in Arms Memorial
+• Drive Donations for the construction and installation of a stone memorial depicting scenes from joint battles fought by Indian and Canadian soldiers. 
+• Ensure the sacrifices of these soldiers are remembered and honored.
+• Inspire future generations with the values of humanity and freedom through the 
+  commemoration of this shared history.
 
 ## Software used
 1. Figma
