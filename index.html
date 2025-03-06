@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brothers in Arms</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sedgwick+Ave&display=swap"
+        rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <script src="js/main.js"></script>
@@ -18,16 +23,16 @@
         <h2 class="hidden">Header</h2>
         <div id="logo" class="col-start-2 col-end-2">
             <a href="index.html">
-                <img src="*" alt="*">
+                <img src="images/BIA-Logo_colour.svg" alt="Logo">
             </a>
         </div>
         <nav class="m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13 xl-col-start-10 xl-col-end-13">
             <h2 class="hidden">Nav</h2>
-            <li><a href="park.html">park</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="history.html">history</a></li>
-            <li><a href="donations.html">donations</a></li>
-            <li><a href="*">donate</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="donations.html">Donations</a></li>
+            <li><a href="*" class="donate-nav">Donate Now!</a></li>
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-nav" class="col-start-3 col-end-5 mobile">
@@ -36,16 +41,130 @@
             <div id="overlay">
                 <ul>
                     <h2 class="hidden">Nav</h2>
-                    <li><a href="park.html">park</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="history.html">history</a></li>
-                    <li><a href="donations.html">donations</a></li>
-                    <li><a href="*">donate</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="*" class="donate-nav">Donate Now!</a></li>
                 </ul>
             </div>
         </div>
-        <!-- End Mobile Menu -->
     </header>
+
+    <main>
+        <section class="full-width-grid-con" id="hero">
+            <div id="hero-left" class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6">
+                <h2 class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6">Honouring the Unsung Heroes of World
+                    War 1
+                </h2>
+                <p class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6">A tribute to the bravery and sacrifice
+                    of
+                    Indian soldiers who served in The Great
+                    War.</p>
+                <button class="col-span-2 m-col-span-3 l-col-span-3 xl-col-span-3"><a href="history.html">Explore
+                        Stories</a></button>
+                <button class="col-span-2 m-col-span-3 l-col-span-3 xl-col-span-3"><a href="about.html">View
+                        Memorial</a></button>
+            </div>
+            <img class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6" src='images/image.jpg' alt="Photo stack">
+        </section>
+
+        <section class="grid-con" id="explore-home">
+            <div id="explore-stories" class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6">
+                <h2>Empowering Lives through Compassion</h2>
+                <p>A tribute to the bravery and sacrifice of Indian soldiers who served in The
+                    Great
+                    War.</p>
+                <button class="col-span-2"><a href="history.html">Explore Stories</a></button>
+            </div>
+            <img class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6" src="images/image-1.jpg" alt="">
+            <img class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6" src="images/image-2.jpg" alt="">
+            <img class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6" src="images/image-3.jpg" alt="">
+        </section>
+
+        <section class="grid-con" id="about-home">
+            <h2 class="col-span-full">About the Memorial</h2>
+            <p class="col-span-full">"Over a million Indian soldiers served during World War I, often alongside Canadian
+                troops,
+                in crucial battles across Europe. At places like Ypres and the Somme, Indian and Canadian soldiers
+                fought side
+                by side, strengthening the Allied forces and demonstrating unity in the face of adversity. The Brothers
+                in Arms
+                Memorial commemorates their shared history and sacrifices."</p>
+            <button class="col-span-2"><a href="about.html#mission">Our Mission</a></button>
+            <section id="model-viewer-con" class="col-span-full"></section>
+        </section>
+
+        <section class="grid-con" id="letters-home">
+            <h2 class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">Letters from the Soldiers</h2>
+            <p class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">Learn their story and get to know
+                them.</p>
+            <div id="letter-con" class="letter-con col-span-full m-col-span-full l-col-span-full xl-col-span-full">
+                <img src="images/image-4.jpg" alt="Letter" class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6">
+                <div id="letter-copy" class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6">
+                    <p>“Tell my mother not to go wandering madly because her son, my brother, is
+                        dead. To
+                        be born
+                        and to die is God's order. Some day we must die, sooner or later, and if I die here, who will
+                        remember me?
+                        It is a fine thing to die far from home. A saint said this, and, as he was a good man, it must
+                        be
+                        true.”</p>
+                    <p>A wounded Sikh soldier for the British-Indian army,<br>18 January, 1915</p>
+                </div>
+            </div>
+            <button class="col-span-2"><a href="about.html#mission">Letters</a></button>
+        </section>
+
+        <section class="grid-con">
+            <h2 class="hidden">Calls to Action</h2>
+            <div class="calltoact-con col-span-4 ">
+                <h3>Get Involved with Us</h3>
+                <p>"Your contribution is essential in bringing this memorial to life. Donations will fund the
+                    construction and
+                    installation of the memorial, as well as ongoing maintenance and educational programs."</p>
+                <button><a href="*">Donate Now!</a></button>
+            </div>
+            <div class="calltoact-con col-span-4">
+                <h3>Volunteer Options</h3>
+                <p>"Become a part of the movement to preserve this important history. Volunteers can help with
+                    fundraising,
+                    events, and educational outreach."</p>
+                <button><a href="*">Sign Up!</a></button>
+            </div>
+            <div class="calltoact-con col-span-4">
+                <h3>Partners</h3>
+                <p>"We are working with various organizations, governments, and institutions to bring this memorial to
+                    life. If
+                    you represent an organization interested in collaborating, please contact us."</p>
+                <button><a href="*">Donate Now!</a></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact" class="full-width-grid-con">
+            <h2 class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">Contact Us</h2>
+            <div id="contact-form" class="col-span-full">
+                <form action="submit-form.php" method="post">
+                    <label for="name" class="col-span-full">Name:</label>
+                    <input type="text" id="name" name="name" required class="col-span-full">
+
+                    <label for="email" class="col-span-full">Email Address:</label>
+                    <input type="email" id="email" name="email" required class="col-span-full">
+
+                    <label for="subject" class="col-span-full">Subject:</label>
+                    <input type="text" id="subject" name="subject" required class="col-span-full">
+
+                    <label for="message" class="col-span-full">Message:</label>
+                    <textarea id="message" name="message" required
+                        class="col-span-full">Type your message here:</textarea>
+
+                    <button type="submit" class="col-span-full">Submit</button>
+                </form>
+            </div>
+        </section>
+    </footer>
 </body>
 
 </html>
