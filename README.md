@@ -16,7 +16,7 @@
 ## Coding languages
 1. Html
 2. Css
-3. Java
+3. Javascript
 4. Php
 5. Sql 
 
