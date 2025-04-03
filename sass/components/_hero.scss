@@ -6,14 +6,23 @@
 }
 
 #hero h2 {
-    font-size: 4em;
+    font-size: 3em;
+    line-height: 1.5em;
     padding: 10px;
     margin-left: 20px;
 }
 
 #hero p {
+    font-size: 1em;
     padding: 10px;
     margin-left: 20px;
+}
+
+#hero button {
+    margin-top: 1em;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 0;
 }
 
 #hero button:first-of-type {
@@ -21,7 +30,8 @@
 }
 
 #hero img {
-    padding: 10px;
+    margin: 10px;
+    padding-right: 2em;
 }
 
 @media screen and (max-width: 768px) {
@@ -33,5 +43,4 @@
         font-size: 2em;
     }
 
-    #hero img {}
 }
