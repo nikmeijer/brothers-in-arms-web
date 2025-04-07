@@ -1,42 +1,64 @@
 (() => {
-    //video start
-
-    //variables
-    console.log("JS is running");
-
+    // VIDEO CONTROL LOGIC
     const player = document.querySelector('video');
     const videoControls = document.querySelector('#video-controls');
     const playButton = document.querySelector('#play-button');
     const pauseButton = document.querySelector('#pause-button');
     const stopButton = document.querySelector('#stop-button');
 
-    player.controls = false;
-    videoControls.classList.remove('hidden');
-    videoControls.style.display = 'flex';
+    if (player && videoControls) {
+        console.log("JS is running");
 
-    //functions
+        player.controls = false;
+        videoControls.classList.remove('hidden');
+        videoControls.style.display = 'flex';
 
-    function playVideo() {
-        console.log("play called");
-        player.play();
+        function playVideo() {
+            player.play();
+        }
+
+        function pauseVideo() {
+            player.pause();
+        }
+
+        function stopVideo() {
+            player.pause();
+            player.currentTime = 1;
+        }
+
+        playButton?.addEventListener("click", playVideo);
+        pauseButton?.addEventListener("click", pauseVideo);
+        stopButton?.addEventListener("click", stopVideo);
     }
-
-    function pauseVideo() {
-        console.log("pause called");
-        player.pause();
-    }
-
-    function stopVideo() {
-        console.log("stop called");
-        player.pause();
-        player.currentTime = 1;
-    }
-
-    //event listeners
-
-    playButton.addEventListener("click", playVideo);
-    pauseButton.addEventListener("click", pauseVideo);
-    stopButton.addEventListener("click", stopVideo);
-
-    //video end
 })();
+
+// VUE LOGIC FOR DISPLAYING ONE EVENT
+document.addEventListener('DOMContentLoaded', () => {
+    const eventAppElement = document.querySelector("#eventApp");
+    if (eventAppElement) {
+        const app = Vue.createApp({
+            data() {
+                return {
+                    event: {},  // just one event
+                    error: ""
+                }
+            },
+            created() {
+                fetch("http://localhost/brother_in_arms-api/public/events/1") // Make sure this is your correct API path
+                    .then(response => {
+                        if (!response.ok) throw new Error("Event not found");
+                        return response.json();
+                    })
+                    .then(data => {
+                        this.event = data;
+                    })
+                    .catch(error => {
+                        this.error = "Failed to load event.";
+                        console.error(error);
+                    });
+            }
+        });
+
+        app.mount("#eventApp");
+    }
+});
