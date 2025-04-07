@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -53,99 +54,50 @@
     </header>
 
     <main>
-        <section class="grid-con">
-            <h2 class="col-span-full m-col-span-full">Diwali Dhamaka</h2>
-            <p class="col-span-full m-col-start-4 m-col-end-10 event-description">Welcome to the news and events section of the Brothers in Arms
-                Memorial! Stay updated on our latest events, memorials, and news regarding our fallen heroes. Join us in
-                honoring their legacy and sacrifices.</p>
+        <div id="eventApp">
+            <main v-if="event">
+                <section class="grid-con">
+                    <h2 class="col-span-full m-col-span-full">{{ event.title }}</h2>
+                    <p class="col-span-full m-col-start-4 m-col-end-10 event-description">
+                        {{ event.description }}
+                    </p>
+                    <button class="col-start-2 col-end-4 m-col-start-6 m-col-end-8">Get Tickets</button>
+                </section>
+        
+                <section class="grid-con event-info">
+                    <div class="col-span-full m-col-start-1 m-col-end-7">
+                        <h3>Tickets</h3>
+                        <p>{{ event.ticket }}</p>
+                        <p class="note">{{ event.offer }}</p>
+                        <p><img src="images/calender.svg" alt="icon" class="icon">{{ event.date }}</p>
+                        <p><img src="images/location.svg" alt="icon" class="icon">{{ event.location }}</p>
+                        <p><img src="images/timing.svg" alt="icon" class="icon">{{ event.time }}</p>
+                    </div>
+        
+                    <div class="m-col-start-7 m-col-end-13 event-poster">
+                        <img src="images/diwali-poster.png" alt="Diwali Dhamaka Poster">
+                    </div>
+                </section>
+        
+                <section class="grid-con">
+                    <h3>Updates</h3>
+                    <p class="col-span-full m-col-start-1 m-col-end-7">
+                        {{ event.updates }}
+                    </p>
+                </section>
+        
+                <section class="grid-con about_event">
+                    <h3 class="col-span-full m-col-start-1 m-col-end-7">About the event</h3>
+                    <video src="#" class="col-span-full m-col-span-full"></video>
+                    <p class="col-span-full m-col-span-full description">{{ event.about_event }}</p>
 
-            <button class="col-start-2 col-end-4 m-col-start-6 m-col-end-8">Get tickets</button>
-        </section>
-
-
-        <section class="grid-con event-info">
-            <div class="col-span-full m-col-start-1 m-col-end-7">
-              <h3>Tickets</h3>
-              <p id="tickets">Adults - $40; Children - Age 5 to 12 - $25; Children - Age 0 to 4 - Free</p>
-              <p class="note">Tickets purchased before Oct 28th will be entered in draw with a chance to win an Apple Ipad</p>
-              <p><img src="images/calender.svg" alt="icon" class="icon">10th November, 2024</p>
-              <p><img src="images/location.svg" alt="icon" class="icon">Centennial Hall, London, ON</p>
-              <p><img src="images/timing.svg" alt="icon" class="icon">5:00 pm to 6:00 pm</p>
-            </div>
-          
-            <!-- Image on the right -->
-            <div class="m-col-start-7 m-col-end-13 event-poster">
-              <img src="images/diwali-poster.png" alt="Diwali Dhamaka Poster">
-            </div>
-          </section>
-
-
-
-        <section class="grid-con">
-            <h2 class="hidden">updates</h2>
-            <h3>Updates</h3>
-
-            <ul class="col-span-full m-col-start-1 m-col-end-7">
-                <li>Tickets for Diwali Dhamaka 2024 at Centennial Hall, on Sunday, November 10th are presently 80% sold.
-                </li>
-
-                <li>Fireworks will light up the skies over Downtown London.</li>
-
-                <li>Check out Dinner Menu from our trusted Dining partner since 2013.</li>
-
-                <li>Our entertainment partner includes</li>
-
-                <li>Community Performers including Classical, Folk from various regions and Bollywood art forms.</li>
-
-                <li>Professional performers include: <br>
-                    Canada’s Premier Bollywood Dance Academy “Bollywood Dance School Canada” <br>
-                    Hi-energy and vibrant dancers from Borderless Dance <br>
-                    Vibrant Bhangra Performers from SIFAT Canada</li>
-
-                <li>Watch our promo Diwali video to check what’s in store, including some of the service work in the
-                    community.</li>
-
-                <li>Gratitude to our sponsors and supporters listed below.</li>
-
-            </ul>
-
-        </section>
-
-
-        <section class="grid-con about_event">
-            <h2 class="hidden">about/h2>
-                <h3 class="col-span-full m-col-start-1 m-col-end-7">About the event</h3>
-
-                <video src="#"></video>
-
-                <p class="col-span-full m-col-span-full description">Diwali or Deepavali, which means a row of lights, is the biggest and most
-                    popular ancient festival of our Dharmic traditions. Celebrated by Hindus, Sikhs, and Jains, the
-                    festival marks the return of joy to our minds, going from darkness to light & new beginnings
-                    symbolized by the return of Sri Rama to Ayodhya, Bandi Chorr Divas and Nirvana of Mahavira. Like the
-                    row of lights lit from a single source, all of us and everything is one with the Universe and
-                    powered by the same source.
-                    Since 2012, Srishti Foundation has brought our communities together in a joyous celebration of
-                    Diwali in London, ON. Our celebrations have been sold-out events every year with up to 1200 in
-                    attendance, in 2023. Our focus remains on delivering the best possible Diwali experience, keeping it
-                    true to its traditional roots, along with masti, with something in it for everyone. Our celebrations
-                    and attendees epitomize the vast diversity from all regions of Bharat, Nepal, the Caribbean, Sri
-                    Lanka, Fiji, and North America, truly a global Diwali.</p>
-
-
-                <p class="col-span-full m-col-span-full"><span>Dinner time #1 </span>- 5:00 pm to 5:45 pm</p>
-                <p class="col-span-full m-col-span-full"><span>Dinner time #2 </span>- 5:45 pm to 6:30 pm</p>
-
-
-                <p class="col-span-full m-col-span-full note">SOLD OUT event since 2012. Hence get your tickets ONLINE at our website
-                    quickly, for early bird pricing of tickets, dinner time of your preference & for the best seats in
-                    the house.</p>
-                <p class="col-span-full m-col-span-full note">TICKETS ARE AVAILABLE ONLINE ONLY.</p>
-
-                <p class="col-span-full m-col-span-full">Our events are run entirely by volunteers and have always been blessed to
-                    have an inspired army of volunteers. If you would like to volunteer at this event or prior to the
-                    event, please send us an email at srishti@srishticanada.org</p>
-
-        </section>
+                    <p class="col-span-full m-col-span-full note">{{ event.note }}</p>
+                    <p class="col-span-full m-col-span-full">{{ event.about_event_more }}</p>
+                </section>
+            </main>
+        
+            <div v-if="error" class="error-message">{{ error }}</div>
+        </div>
 
         <section class="grid-con donation-section">
             <h2 class="m-col-start-1 m-col-end-7">Make a Donation</h2>
