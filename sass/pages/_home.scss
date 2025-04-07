@@ -1,0 +1,71 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #ffefd9;
+}
+
+h2 {
+    color: #701a32;
+    font-size: 2em;
+}
+
+#explore-home {
+    margin-top: 20px;
+}
+
+#explore-stories h2 {
+    font-size: 2em
+}
+
+#explore-home p {
+    padding: 10px;
+}
+
+#about-home p {
+    padding: 10px;
+}
+
+#letters-home p {
+    padding: 10px;
+}
+
+#calltoact-con {
+    padding: 10px;
+    display: inline-block;
+}
+
+#calltoact-con p {
+    padding: 10px;
+}
+
+#calltoact-con button {
+    padding: 10px;
+}
+
+#letters-home {
+    display: flex;
+    flex-direction: column;
+}
+
+#calltoact-con button {
+
+    border: 2px;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #701a32;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#calltoact-con button a {
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+#calltoact-con button:hover {
+    border: 2px;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #be1e2d;
+    color: white;
+}

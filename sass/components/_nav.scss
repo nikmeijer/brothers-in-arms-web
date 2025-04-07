@@ -32,7 +32,7 @@
     height: 3px;
     width: 25px;
     border-radius: 2px;
-    color: rgb(255, 255, 255);
+    color: #701a32;
     position: relative;
     display: block;
     transition: all 0.2s ease-in-out;
@@ -60,7 +60,7 @@
     height: 3px;
     width: 25px;
     border-radius: 2px;
-    background-color: rgb(255, 255, 255);
+    background-color: #701a32;
     position: absolute;
     content: "";
     transition: all 0.2s ease-in-out;
@@ -169,7 +169,7 @@ nav li:last-child {
 }
 
 nav li a {
-    color: white;
+    color: rgb(69, 69, 69);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     font-weight: bold;

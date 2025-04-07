@@ -1,0 +1,28 @@
+#callstoaction button {
+    margin-top: 20px;
+}
+
+#callstoaction button a {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#callstoaction h3 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.calltoact-con {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 5em;
+    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calltoact-con button {
+    align-self: center;
+    justify-self: flex-end;
+}

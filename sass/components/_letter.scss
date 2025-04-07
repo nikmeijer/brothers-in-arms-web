@@ -1,0 +1,39 @@
+#letters-home h3 {
+    font-weight: normal;
+    font-size: 1em;
+    padding-top: 1em;
+}
+
+#letters-home p {
+    font-size: 1.5em;
+    margin: 2em;
+}
+
+#letters-home img {
+    margin: 2em;
+}
+
+#letter-con {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 2em;
+}
+
+#letter-copy {
+    display: flex;
+    flex-direction: column;
+}
+
+#letters-home button a {
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+#letters-home button {
+    width: fit-content;
+    align-self: center;
+    margin-top: 0.5em;
+    margin-bottom: 4em;
+}
