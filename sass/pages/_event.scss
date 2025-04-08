@@ -63,11 +63,18 @@ h3 {
 
 .donation-section {
     margin-top: 20px;
+    
 }
 
 .donation-section h2{
     font-size: 3em;
-    text-align: left;
+    text-align: center;
+}
+
+.donation-section p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 @media(max-width: 768px){
