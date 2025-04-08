@@ -14,6 +14,7 @@
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
@@ -56,111 +57,68 @@
     </header>
 
     <main>
-        <section class="grid-con">
-            <h2 class="col-span-full m-col-span-full">News</h2>
-            <p class="col-span-full m-col-start-4 m-col-end-10">Welcome to the news and events section of the Brothers in Arms
-                Memorial! Stay updated on our latest events, memorials, and news regarding our fallen heroes. Join us in
-                honoring their legacy and sacrifices.</p>
+        <div id="newsApp">
+            <!-- EVENTS Section -->
+            <section class="grid-con">
+                <h2 class="col-span-full m-col-span-full">News</h2>
+                <p class="col-span-full m-col-start-4 m-col-end-10">
+                    Welcome to the news and events section of the Brothers in Arms Memorial! Stay updated on our latest events, memorials, and news regarding our fallen heroes.
+                </p>
+                <button class="m-col-start-6 m-col-end-8">Upcoming Event</button>
+            </section>
+        
+            <section class="grid-con news">
+                <div
+                    v-for="(item, index) in news.slice(0, 3)"
+                    :key="item.id"
+                    class="col-span-full m-col-start-1 m-col-end-5 l-col-start-auto l-col-span-4"
+                >
+                    <img :src="'images/' + item.image" :alt="item.title" class="news-img" />
+                    <div class="tags">
+                        <button>News</button>
+                        <button>Memorial</button>
+                    </div>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                    <p class="date">{{ item.date }}</p>
+                </div>
+            </section>
+        
+            <!-- PAST EVENTS Section -->
+            <section class="grid-con news">
+                <h2 class="col-span-full m-col-span-full">Past Events</h2>
+            
+                <div
+                    v-for="item in news.slice(3)"
+                    :key="item.id"
+                    class="col-span-full m-col-start-1 m-col-end-5 l-col-start-auto l-col-span-4"
+                >
+                    <img :src="'images/' + item.image" :alt="item.title" class="news-img" />
+                    <div class="tags">
+                        <button>News</button>
+                        <button>Memorial</button>
+                    </div>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                    <p class="date">{{ item.date }}</p>
+                </div>
+            </section>
+        
+            <div v-if="error" class="col-span-full error">{{ error }}</div>
+        </div>
+        
 
-            <button class="m-col-start-6 m-col-end-8">Upcoming event</button>
-        </section>
-
-
-        <section class="grid-con">
-            <h2 class="hidden">news</h2>
-            <div class="m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-4">
-                <button>News</button>
-                <button>Memorials</button>
-
-                <h3>Youth Internship</h3>
-                <p>Welcome to the news and events section of the Brothers in Arms Memorial! Stay updated on our latest
-                    events, memorials, and news regarding our fallen heroes. Join us in honoring their legacy and
-                    sacrifices.</p>
-                <p>November 20,2023</p>
-
-                <button>Explore now</button>
-            </div>
-
-            <div class="m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8">
-                <button>Events</button>
-
-                <h3>Tribal Youth Help</h3>
-                <p>Welcome to the news and events section of the Brothers in Arms Memorial! Stay updated on our latest
-                    events, memorials, and news regarding our fallen heroes. Join us in honoring their legacy and
-                    sacrifices.</p>
-                <p>November 20,2023</p>
-
-                <button>Explore now</button>
-            </div>
-
-            <div class="m-col-start-9 m-col-end-12 l-col-start-9 l-col-end-12">
-                <button>News</button>
-                <button>Memorials</button>
-
-                <h3>Youth Internship</h3>
-                <p>Welcome to the news and events section of the Brothers in Arms Memorial! Stay updated on our latest
-                    events, memorials, and news regarding our fallen heroes. Join us in honoring their legacy and
-                    sacrifices.</p>
-                <p>November 20,2023</p>
-
-                <button>Explore now</button>
-            </div>
-
-        </section>
-
-        <section class="grid-con">
-            <h2 class="hidden">news</h2>
-            <div class="m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-4">
-                <button>News</button>
-                <button>Memorials</button>
-
-                <h3>Serving in Covid</h3>
-                <p>Welcome to the news and events section of the Brothers in Arms Memorial! Stay updated on our latest
-                    events, memorials, and news regarding our fallen heroes. Join us in honoring their legacy and
-                    sacrifices.</p>
-                <p>November 20,2023</p>
-
-                <button>Explore now</button>
-            </div>
-
-            <div class="m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8">
-                <button>News</button>
-                <button>Memorials</button>
-
-                <h3>Serving in Covid</h3>
-                <p>Welcome to the news and events section of the Brothers in Arms Memorial! Stay updated on our latest
-                    events, memorials, and news regarding our fallen heroes. Join us in honoring their legacy and
-                    sacrifices.</p>
-                <p>November 20,2023</p>
-
-                <button>Explore now</button>
-            </div>
-
-            <div class="m-col-start-9 m-col-end-12 l-col-start-9 l-col-end-12">
-                <button>News</button>
-                <button>Memorials</button>
-
-                <h3>Serving in Covid</h3>
-                <p>Welcome to the news and events section of the Brothers in Arms Memorial! Stay updated on our latest
-                    events, memorials, and news regarding our fallen heroes. Join us in honoring their legacy and
-                    sacrifices.</p>
-                <p>November 20,2023</p>
-
-                <button>Explore now</button>
-            </div>
-
-        </section>
-
-        <section class="grid-con">
-            <h2 class="m-col-start-1 m-col-end-7">Make a Donation</h2>
-            <p class="m-col-start-1 m-col-end-7">Help us to achieve our goal of having a permanent memorial to those
+        <section class="grid-con donation-section">
+            <h2 class="m-col-span-full">Make a Donation</h2>
+            <p class="m-col-start-4 m-col-end-10">Help us to achieve our goal of having a permanent memorial to those
                 Muslims who have fought and served during times of war.</p>
+
+                <button class="m-col-start-6 m-col-end-8">Donate Now</button>
         </section>
 
-
-        <section class="grid-con">
-            <h2 class="m-col-start-1 m-col-end-7">Give as you Live</h2>
-            <p class="m-col-start-1 m-col-end-7">We are registered with Give as you Live. This means we will receive a
+        <section class="grid-con donation-section">
+            <h2 class="m-col-span-full">Give as you Live</h2>
+            <p class="m-col-start-4 m-col-end-10">We are registered with Give as you Live. This means we will receive a
                 small donation if you do your online shopping via Give as you Live. You can sign up to support us via
                 this link.</p>
         </section>

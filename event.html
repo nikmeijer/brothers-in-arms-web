@@ -75,19 +75,18 @@
                         <p><img src="images/calender.svg" alt="icon" class="icon">{{ event.date }}</p>
                         <p><img src="images/location.svg" alt="icon" class="icon">{{ event.location }}</p>
                         <p><img src="images/timing.svg" alt="icon" class="icon">{{ event.time }}</p>
-                    </div>
-        
-                    <div class="m-col-start-7 m-col-end-13 event-poster">
-                        <img src="images/diwali-poster.png" alt="Diwali Dhamaka Poster">
-                    </div>
-                </section>
-        
-                <section class="grid-con">
-                    <h3>Updates</h3>
+                        <h3>Updates</h3>
                     <p class="col-span-full m-col-start-1 m-col-end-7">
                         {{ event.updates }}
                     </p>
+                    </div>
+        
+                    <div class="m-col-start-7 m-col-end-13 event-poster">
+                        <img :src="'images/' + event.poster" :alt="event.title + ' Poster'" />
+                    </div>
                 </section>
+        
+
         
                 <section class="grid-con about_event">
                     <h3 class="col-span-full m-col-start-1 m-col-end-7">About the event</h3>
