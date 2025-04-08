@@ -1,5 +1,5 @@
 # Brothers In Arm Memorials
-• Raise awareness for the Brothers in Arms Memorial
+• Raising awareness for the Brothers in Arms Memorial
 • Drive Donations for the construction and installation of a stone memorial depicting scenes from joint battles fought by Indian and Canadian soldiers. 
 • Ensure the sacrifices of these soldiers are remembered and honored.
 • Inspire future generations with the values of humanity and freedom through the 
@@ -7,11 +7,12 @@
 
 ## Software used
 1. Figma
-2. Illustrator 
+2. Adobe Illustrator 
 3. Premier Pro
-4. Affter Effects
-5. Photoshope
+4. Adobe After Effects
+5. Adobe Photoshop
 6. Cinema 4d
+7. Canva
 
 ## Coding languages
 1. Html
