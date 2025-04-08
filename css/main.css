@@ -593,7 +593,13 @@ span {
 
 .donation-section h2 {
   font-size: 3em;
-  text-align: left;
+  text-align: center;
+}
+
+.donation-section p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -608,4 +614,168 @@ span {
   .donation-section {
     display: none;
   }
+}
+#contact-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-hero h2 {
+  align-self: center;
+  text-align: center;
+}
+
+#contact-hero p {
+  align-self: center;
+  text-align: center;
+}
+
+#contact-con {
+  display: flex;
+  flex-direction: row;
+}
+
+#contact-text {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-text h2 {
+  margin-top: 1em;
+  text-align: left;
+  align-self: left;
+}
+
+#contact-text p {
+  text-align: left;
+  align-self: left;
+}
+
+#contact-text p:first-child {
+  margin-bottom: 1em;
+}
+
+#contact-text h3 {
+  text-align: left;
+  align-self: left;
+  margin-bottom: 1em;
+}
+
+#contact-text button {
+  align-self: left;
+  text-align: left;
+  width: fit-content;
+  margin-top: 1em 0em;
+}
+
+#contact-text h2:last-child {
+  margin-top: 1em;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #701a32;
+}
+
+#contact h2 {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 2em;
+  color: #ffffff;
+  font-weight: bold;
+  display: inline;
+  margin-bottom: 5px;
+  border-bottom: white 1px solid;
+}
+
+#contact h2 span {
+  display: inline;
+  color: #FF4200;
+}
+
+#contact h2 span img {
+  height: 1em;
+}
+
+#contact p {
+  padding: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  #contact p {
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+  }
+}
+#contact label {
+  color: white;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  justify-self: center;
+}
+
+#contact form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  padding: 2em;
+  justify-items: center;
+}
+
+#contact input,
+#contact textarea {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  width: 100%;
+  padding: 1em;
+  font-size: 0.5em;
+  border: none;
+  color: white;
+  border-bottom: 2px white solid;
+  background-color: #701a32;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+  box-shadow: #701a32;
+}
+
+#contact button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 2px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 10px;
+}
+
+#contact button:hover {
+  background-color: #be1e2d;
+  color: white;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.news {
+  margin-top: 20px;
 }

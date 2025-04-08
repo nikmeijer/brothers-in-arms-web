@@ -24,16 +24,18 @@
         <h2 class="hidden">Header</h2>
         <div id="logo" class="col-start-2 col-end-2">
             <a href="index.html">
-                <img src="*" alt="*">
+                <img src="images/BIA-Logo_colour.svg" alt="Logo">
             </a>
         </div>
         <nav class="m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13 xl-col-start-10 xl-col-end-13">
             <h2 class="hidden">Nav</h2>
-            <li><a href="about.html">park</a></li>
-            <li><a href="events.html">about</a></li>
-            <li><a href="history.html">history</a></li>
-            <li><a href="donations.html">donations</a></li>
-            <li><a href="*">donate</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="donations.html">Donations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="*" class="donate-nav">Donate Now</a></li>
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-nav" class="col-start-3 col-end-5 mobile">
@@ -42,15 +44,16 @@
             <div id="overlay">
                 <ul>
                     <h2 class="hidden">Nav</h2>
-                    <li><a href="about.html">park</a></li>
-                    <li><a href="events.html">about</a></li>
-                    <li><a href="history.html">history</a></li>
-                    <li><a href="donations.html">donations</a></li>
-                    <li><a href="*">donate</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="*" class="donate-nav">Donate Now</a></li>
                 </ul>
             </div>
         </div>
-        <!-- End Mobile Menu -->
     </header>
 
     <main>
@@ -72,19 +75,18 @@
                         <p><img src="images/calender.svg" alt="icon" class="icon">{{ event.date }}</p>
                         <p><img src="images/location.svg" alt="icon" class="icon">{{ event.location }}</p>
                         <p><img src="images/timing.svg" alt="icon" class="icon">{{ event.time }}</p>
-                    </div>
-        
-                    <div class="m-col-start-7 m-col-end-13 event-poster">
-                        <img src="images/diwali-poster.png" alt="Diwali Dhamaka Poster">
-                    </div>
-                </section>
-        
-                <section class="grid-con">
-                    <h3>Updates</h3>
+                        <h3>Updates</h3>
                     <p class="col-span-full m-col-start-1 m-col-end-7">
                         {{ event.updates }}
                     </p>
+                    </div>
+        
+                    <div class="m-col-start-7 m-col-end-13 event-poster">
+                        <img :src="'images/' + event.poster" :alt="event.title + ' Poster'" />
+                    </div>
                 </section>
+        
+
         
                 <section class="grid-con about_event">
                     <h3 class="col-span-full m-col-start-1 m-col-end-7">About the event</h3>
@@ -100,16 +102,16 @@
         </div>
 
         <section class="grid-con donation-section">
-            <h2 class="m-col-start-1 m-col-end-7">Make a Donation</h2>
-            <p class="m-col-start-1 m-col-end-7">Help us to achieve our goal of having a permanent memorial to those
+            <h2 class="m-col-span-full">Make a Donation</h2>
+            <p class="m-col-start-4 m-col-end-10">Help us to achieve our goal of having a permanent memorial to those
                 Muslims who have fought and served during times of war.</p>
 
-                <button class="m-col-start-1 m-col-end-3">Donate Now</button>
+                <button class="m-col-start-6 m-col-end-8">Donate Now</button>
         </section>
 
         <section class="grid-con donation-section">
-            <h2 class="m-col-start-1 m-col-end-7">Give as you Live</h2>
-            <p class="m-col-start-1 m-col-end-7">We are registered with Give as you Live. This means we will receive a
+            <h2 class="m-col-span-full">Give as you Live</h2>
+            <p class="m-col-start-4 m-col-end-10">We are registered with Give as you Live. This means we will receive a
                 small donation if you do your online shopping via Give as you Live. You can sign up to support us via
                 this link.</p>
         </section>
