@@ -81,21 +81,28 @@
             </div>
 
             <div id="contact" class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6">
-                <form method="post" action="sendmail.php">
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
+                <form method="post" action="includes/sendmail.php">
 
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
-
+                
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" required>
-
-                    <label for="subject">Message:</label>
+                
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                
+                    <label for="message">Message:</label>
                     <textarea id="message" name="message" required placeholder="Type your message here:"></textarea>
-
-                    <button type="send">Submit</button>
+                
+                    <button type="submit">Submit</button>
                 </form>
+
+                <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
+                    <div class="success-message">
+                        <p>Thank you! Your message has been successfully sent.</p>
+                    </div>
+                <?php endif; ?>
             </div>
         </section>
     </main>
