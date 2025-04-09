@@ -1,0 +1,235 @@
+.tight-spacing {
+    margin: 20px auto;
+}
+
+#about-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#about-hero h2 {
+    color: #701a32;
+    font-size: 4em;
+    text-align: center;
+    padding: 20px;
+}
+
+#about-hero p {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.about-hero-images {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.about-hero-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    #about-hero h2 {
+        font-size: 2em;
+    }
+
+    .about-hero-images {
+        flex-direction: column;
+    }
+}
+
+#about-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+    width: 100%;
+    padding: 0;
+}
+
+#about-video h2 {
+    color: #701a32;
+    font-size: 2.5em;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+}
+
+#about-video p {
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0;
+}
+
+#about-park {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text h2 {
+    color: #701a32;
+    font-size: 2em;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.about-text p,
+.about-text ul {
+    padding: 10px 0;
+    text-align: left;
+}
+
+.about-text span {
+    color: #701a32;
+}
+
+.about-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.about-text li {
+    padding: 5px 0;
+    font-size: 1em;
+}
+
+#about-park img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#about-mission {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0;
+}
+
+#about-mission img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#about-park>div:last-child,
+#about-mission>div:last-child {
+    display: flex;
+    align-items: flex-start;
+    min-height: 200px;
+}
+
+#about-park img[src=""],
+#about-park img:not([src]),
+#about-mission img[src=""],
+#about-mission img:not([src]) {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+
+    #about-park,
+    #about-mission {
+        flex-direction: column;
+    }
+
+    #about-park>div:last-child,
+    #about-mission>div:last-child {
+        min-height: 150px;
+    }
+}
+
+#about-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 800px;
+    padding: 0;
+}
+
+#about-cta h3 {
+    color: #701a32;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+#about-cta h2.primary {
+    color: #701a32;
+    font-size: 3em;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+#about-cta h2.secondary {
+    color: #701a32;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+#about-cta p {
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0;
+}
+
+#about-cta .donate-btn {
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #701a32;
+    background-color: #701a32;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+}
+
+.donate-btn:hover {
+    background-color: #be1e2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+.donate-btn a {
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+#about-cta p a {
+    color: #701a32;
+    text-decoration: underline;
+}
