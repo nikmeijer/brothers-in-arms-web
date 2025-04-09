@@ -13,7 +13,9 @@
         rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -96,28 +98,47 @@
             <section id="model-viewer-con" class="col-span-full"></section>
         </section>
 
-        <section class="grid-con" id="letters-home">
-            <h2 class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">Letters from the Soldiers</h2>
-            <h3 class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">Learn their story and get to know
-                them.</h3>
-            <div id="letter-con" class="letter-con col-span-full m-col-span-full l-col-span-full xl-col-span-full">
-                <img src="images/image-4.jpg" alt="Letter" class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6">
-                <div id="letter-copy" class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6">
-                    <p>“Tell my mother not to go wandering madly because her son, my brother, is
-                        dead. To
-                        be born
-                        and to die is God's order. Some day we must die, sooner or later, and if I die here, who
-                        will
-                        remember me?
-                        It is a fine thing to die far from home. A saint said this, and, as he was a good man, it
-                        must
-                        be
-                        true.”</p>
-                    <p>A wounded Sikh soldier for the British-Indian army,<br>18 January, 1915</p>
+        <section id="letters-home">
+            <h2>Letters from the soldiers who sacrificed their lives in the war!</h2>
+        
+            <div class="swiper letter-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide letter-slide">
+                        <img src="images/letter_1.png" alt="Letter 1" class="letter-img">
+                        <div class="letter-text">
+                          <p>“Tell my mother not to go wandering madly because...”</p>
+                          <p class="letter-author">A wounded Sikh to his father<br><span>January 18th, 1915</span></p>
+                        </div>
+                      </div>
+        
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide letter-slide">
+                        <img src="images/letter.png.jpg" alt="Letter 2" class="letter-img">
+                        <div class="letter-text">
+                            <p>“Tell my mother not to go wandering madly because her son, my brother, is dead...”</p>
+                            <p class="letter-author">A wounded Sikh to his father<br><span>January 18th, 1915</span></p>
+                        </div>
+                    </div>
+        
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide letter-slide">
+                        <img src="images/letter.png" alt="Letter 3" class="letter-img">
+                        <div class="letter-text">
+                            <p>GG</p>
+                            <p class="letter-author">A wounded Sikh to his father<br><span>January 18th, 1915</span></p>
+                        </div>
+                    </div>
                 </div>
+        
+                <!-- Arrows -->
+                <div class="swiper-button-prev custom-arrow"></div>
+                <div class="swiper-button-next custom-arrow"></div>
             </div>
-            <button class="col-span-2"><a href="about.html#mission">See the Directory</a></button>
         </section>
+        
+        
+        
 
         <section class="grid-con" id="callstoaction">
             <h2 class="hidden">Calls to Action</h2>

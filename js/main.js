@@ -32,8 +32,9 @@
     }
 })();
 
-// VUE LOGIC FOR EVENT PAGE
+// VUE + Swiper LOGIC
 document.addEventListener('DOMContentLoaded', () => {
+    // EVENT PAGE VUE LOGIC
     const eventAppElement = document.querySelector("#eventApp");
     if (eventAppElement) {
         const app = Vue.createApp({
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         app.mount("#eventApp");
     }
 
-    // VUE LOGIC FOR NEWS PAGE
+    // NEWS PAGE VUE LOGIC
     const newsAppElement = document.querySelector("#newsApp");
     if (newsAppElement) {
         const newsApp = Vue.createApp({
@@ -88,28 +89,48 @@ document.addEventListener('DOMContentLoaded', () => {
         newsApp.mount("#newsApp");
     }
 
+    // GALLERY PAGE VUE LOGIC
     const galleryAppElement = document.querySelector("#galleryApp");
     if (galleryAppElement) {
-      const galleryApp = Vue.createApp({
-        data() {
-          return {
-            gallery: [],
-            error: ""
-          };
-        },
-        created() {
-          fetch("http://localhost/brother_in_arms-api/public/gallery")
-            .then(res => res.json())
-            .then(data => {
-              this.gallery = data;
-            })
-            .catch(err => {
-              this.error = "Failed to load gallery.";
-              console.error(err);
+        const galleryApp = Vue.createApp({
+            data() {
+                return {
+                    gallery: [],
+                    error: ""
+                };
+            },
+            created() {
+                fetch("http://localhost/brother_in_arms-api/public/gallery")
+                    .then(res => res.json())
+                    .then(data => {
+                        this.gallery = data;
+                    })
+                    .catch(err => {
+                        this.error = "Failed to load gallery.";
+                        console.error(err);
+                    });
+            }
+        });
+
+        galleryApp.mount("#galleryApp");
+    }
+
+    // LETTERS SWIPER INITIALIZATION
+    const letterSwiperEl = document.querySelector('.letter-swiper');
+    if (letterSwiperEl && typeof Swiper !== "undefined") {
+        const slides = letterSwiperEl.querySelectorAll('.swiper-slide');
+        if (slides.length > 1) {
+            new Swiper('.letter-swiper', {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
             });
         }
-      });
-
-      galleryApp.mount("#galleryApp");
     }
 });
