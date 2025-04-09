@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -144,6 +145,29 @@
                 <button><a href="*">Talk to us!</a></button>
             </div>
         </section>
+
+        
+            <div id="galleryApp">
+                <section class="grid-con" id="gallery-home">
+                  <h2 class="col-span-full" style="color: #8B0021;">Gallery</h2>
+                  <p class="col-span-full">
+                    "A picture is worth a thousand words. Here, we showcase photos and videos from the memorial's development, historical archives, and past events."
+                  </p>
+              
+                  <div class="col-span-full gallery-grid">
+                    <img v-for="image in gallery" :src="'images/' + image.images" :alt="'Gallery Image ' + image.id" />
+                  </div>
+              
+                  <div class="col-span-full" style="text-align: right; margin-top: 1em;">
+                    <a href="gallery.html" class="see-all-button">See all</a>
+                  </div>
+                </section>
+              
+                <div v-if="error" class="col-span-full error">{{ error }}</div>
+              </div>
+              
+
+        
     </main>
 
     <footer>

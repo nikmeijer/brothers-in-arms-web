@@ -87,4 +87,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         newsApp.mount("#newsApp");
     }
+
+    const galleryAppElement = document.querySelector("#galleryApp");
+    if (galleryAppElement) {
+      const galleryApp = Vue.createApp({
+        data() {
+          return {
+            gallery: [],
+            error: ""
+          };
+        },
+        created() {
+          fetch("http://localhost/brother_in_arms-api/public/gallery")
+            .then(res => res.json())
+            .then(data => {
+              this.gallery = data;
+            })
+            .catch(err => {
+              this.error = "Failed to load gallery.";
+              console.error(err);
+            });
+        }
+      });
+
+      galleryApp.mount("#galleryApp");
+    }
 });
