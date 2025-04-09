@@ -15,6 +15,7 @@
     <link href="css/main.css" rel="stylesheet">
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/video.js"></script>
 </head>
 
 <body>
@@ -75,14 +76,27 @@
         </section>
 
         <section class="grid-con" id="about-video">
-            <h2 class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11">
-                Drone
-                Footage</h2>
-            <p class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11">
-                Over
-                135,000 (of a total of 1.3 Million) Indian Army Corps soldiers fought alongside Canadian soldiers in
-                Europe
-                that included but not limited to – Ypres, St Julian, Festubert, The Somme, Vimy.</p>
+            <div
+                class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11 video-wrapper">
+                <h2>Drone Footage</h2>
+                <p>Over 135,000 (of a total of 1.3 Million) Indian Army Corps soldiers fought alongside Canadian
+                    soldiers in
+                    Europe that included but not limited to – Ypres, St Julian, Festubert, The Somme, Vimy.</p>
+                <section id="player-container">
+                    <video class="player" controls data-poster="images/placeholder.jpg">
+                        <source src="videos/meijer_nikolai_demo-reel.mp4" type="video/mp4">
+                        <p>Your browser does not support the video tag.</p>
+                    </video>
+                    <div class="video-controls hidden" id="video-controls">
+                        <button id="play-button"><i class="fa fa-play-circle-o"></i></button>
+                        <button id="pause-button"><i class="fa fa-pause-circle-o"></i></button>
+                        <button id="stop-button"><i class="fa fa-stop-circle-o"></i></button>
+                        <i class="fa fa-volume-up"></i>
+                        <input type="range" id="change-vol" step="0.01" min="0" max="1" value="1">
+                        <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
+                    </div>
+                </section>
+            </div>
         </section>
 
         <section class="grid-con" id="about-park">

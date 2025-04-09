@@ -46,12 +46,13 @@
 }
 
 #about-video {
+    margin: 40px 0;
+}
+
+.video-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px 0;
-    width: 100%;
-    padding: 0;
 }
 
 #about-video h2 {
@@ -59,15 +60,55 @@
     font-size: 2.5em;
     text-align: center;
     padding: 20px;
-    width: 100%;
     margin: 0;
 }
 
 #about-video p {
     text-align: center;
     padding: 10px 20px;
-    width: 100%;
     margin: 0;
+}
+
+#player-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #090815;
+    margin-bottom: 2em;
+}
+
+.video-controls {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    display: flex;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.fa {
+    color: #701a32;
+    font-size: 28px;
+    margin-left: 20px;
+}
+
+.fa:hover {
+    color: rgba(112, 26, 50, 0.5);
+}
+
+.fa-volume-up {
+    margin-left: auto;
+}
+
+.fa-stop-circle-o {
+    margin-right: 20px;
 }
 
 #about-park {
