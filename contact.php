@@ -77,7 +77,7 @@
                 <h2>Give as you Live</h2>
                 <p>We are registered with <a href="*">Give as you Live. </a>This means we will receive a small donation
                     if you do your online shopping via Give as you Live. You can sign up to support us via <a
-                        href="*"></a>this link.</p>
+                        href="*">this link</a>.</p>
             </div>
 
             <div id="contact" class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6">
