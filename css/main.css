@@ -706,6 +706,16 @@ span {
   color: white;
 }
 
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #c3e6cb;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
   #contact p {
     padding: 10px;
@@ -765,4 +775,17 @@ span {
 #contact button:hover {
   background-color: #be1e2d;
   color: white;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.news {
+  margin-top: 20px;
 }

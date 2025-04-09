@@ -32,19 +32,19 @@
     }
 })();
 
-// VUE LOGIC FOR DISPLAYING ONE EVENT
+// VUE LOGIC FOR EVENT PAGE
 document.addEventListener('DOMContentLoaded', () => {
     const eventAppElement = document.querySelector("#eventApp");
     if (eventAppElement) {
         const app = Vue.createApp({
             data() {
                 return {
-                    event: {},  // just one event
+                    event: {},
                     error: ""
-                }
+                };
             },
             created() {
-                fetch("http://localhost/brother_in_arms-api/public/events/1") // Make sure this is your correct API path
+                fetch("http://localhost/brother_in_arms-api/public/events/1")
                     .then(response => {
                         if (!response.ok) throw new Error("Event not found");
                         return response.json();
@@ -60,5 +60,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         app.mount("#eventApp");
+    }
+
+    // VUE LOGIC FOR NEWS PAGE
+    const newsAppElement = document.querySelector("#newsApp");
+    if (newsAppElement) {
+        const newsApp = Vue.createApp({
+            data() {
+                return {
+                    news: [],
+                    error: ""
+                };
+            },
+            created() {
+                fetch("http://localhost/brother_in_arms-api/public/news")
+                    .then(res => res.json())
+                    .then(data => {
+                        this.news = data;
+                    })
+                    .catch(err => {
+                        this.error = "Failed to load news.";
+                        console.error(err);
+                    });
+            }
+        });
+
+        newsApp.mount("#newsApp");
     }
 });
