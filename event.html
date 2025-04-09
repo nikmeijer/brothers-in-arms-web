@@ -33,7 +33,6 @@
             <li><a href="about.html">About</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="event.html">Events</a></li>
-            <li><a href="donations.html">Donations</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="*" class="donate-nav">Donate Now</a></li>
         </nav>
@@ -48,7 +47,6 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="history.html">History</a></li>
                     <li><a href="events.html">Events</a></li>
-                    <li><a href="donations.html">Donations</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="*" class="donate-nav">Donate Now</a></li>
                 </ul>
@@ -66,7 +64,7 @@
                     </p>
                     <button class="col-start-2 col-end-4 m-col-start-6 m-col-end-8">Get Tickets</button>
                 </section>
-        
+
                 <section class="grid-con event-info">
                     <div class="col-span-full m-col-start-1 m-col-end-7">
                         <h3>Tickets</h3>
@@ -76,18 +74,18 @@
                         <p><img src="images/location.svg" alt="icon" class="icon">{{ event.location }}</p>
                         <p><img src="images/timing.svg" alt="icon" class="icon">{{ event.time }}</p>
                         <h3>Updates</h3>
-                    <p class="col-span-full m-col-start-1 m-col-end-7">
-                        {{ event.updates }}
-                    </p>
+                        <p class="col-span-full m-col-start-1 m-col-end-7">
+                            {{ event.updates }}
+                        </p>
                     </div>
-        
+
                     <div class="m-col-start-7 m-col-end-13 event-poster">
                         <img :src="'images/' + event.poster" :alt="event.title + ' Poster'" />
                     </div>
                 </section>
-        
 
-        
+
+
                 <section class="grid-con about_event">
                     <h3 class="col-span-full m-col-start-1 m-col-end-7">About the event</h3>
                     <video src="#" class="col-span-full m-col-span-full"></video>
@@ -97,7 +95,7 @@
                     <p class="col-span-full m-col-span-full">{{ event.about_event_more }}</p>
                 </section>
             </main>
-        
+
             <div v-if="error" class="error-message">{{ error }}</div>
         </div>
 
@@ -106,7 +104,7 @@
             <p class="m-col-start-4 m-col-end-10">Help us to achieve our goal of having a permanent memorial to those
                 Muslims who have fought and served during times of war.</p>
 
-                <button class="m-col-start-6 m-col-end-8">Donate Now</button>
+            <button class="m-col-start-6 m-col-end-8">Donate Now</button>
         </section>
 
         <section class="grid-con donation-section">
