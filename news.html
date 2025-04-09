@@ -33,7 +33,6 @@
             <li><a href="about.html">About</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="event.html">Events</a></li>
-            <li><a href="donations.html">Donations</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="*" class="donate-nav">Donate Now</a></li>
         </nav>
@@ -48,7 +47,6 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="history.html">History</a></li>
                     <li><a href="event.html">Events</a></li>
-                    <li><a href="donations.html">Donations</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="*" class="donate-nav">Donate Now</a></li>
                 </ul>
@@ -62,17 +60,15 @@
             <section class="grid-con">
                 <h2 class="col-span-full m-col-span-full">Events</h2>
                 <p class="col-span-full m-col-start-4 m-col-end-10">
-                    Welcome to the news and events section of the Brothers in Arms Memorial! Stay updated on our latest events, memorials, and news regarding our fallen heroes.
+                    Welcome to the news and events section of the Brothers in Arms Memorial! Stay updated on our latest
+                    events, memorials, and news regarding our fallen heroes.
                 </p>
                 <button class="m-col-start-6 m-col-end-8">Upcoming Event</button>
             </section>
-        
+
             <section class="grid-con news">
-                <div
-                    v-for="(item, index) in news.slice(0, 3)"
-                    :key="item.id"
-                    class="col-span-full m-col-start-1 m-col-end-5 l-col-start-auto l-col-span-4"
-                >
+                <div v-for="(item, index) in news.slice(0, 3)" :key="item.id"
+                    class="col-span-full m-col-start-1 m-col-end-5 l-col-start-auto l-col-span-4">
                     <img :src="'images/' + item.image" :alt="item.title" class="news-img" />
                     <div class="tags">
                         <button>News</button>
@@ -83,16 +79,13 @@
                     <p class="date">{{ item.date }}</p>
                 </div>
             </section>
-        
+
             <!-- PAST EVENTS Section -->
             <section class="grid-con news">
                 <h2 class="col-span-full m-col-span-full">Past Events</h2>
-            
-                <div
-                    v-for="item in news.slice(3)"
-                    :key="item.id"
-                    class="col-span-full m-col-start-1 m-col-end-5 l-col-start-auto l-col-span-4"
-                >
+
+                <div v-for="item in news.slice(3)" :key="item.id"
+                    class="col-span-full m-col-start-1 m-col-end-5 l-col-start-auto l-col-span-4">
                     <img :src="'images/' + item.image" :alt="item.title" class="news-img" />
                     <div class="tags">
                         <button>News</button>
@@ -103,17 +96,17 @@
                     <p class="date">{{ item.date }}</p>
                 </div>
             </section>
-        
+
             <div v-if="error" class="col-span-full error">{{ error }}</div>
         </div>
-        
+
 
         <section class="grid-con donation-section">
             <h2 class="m-col-span-full">Make a Donation</h2>
             <p class="m-col-start-4 m-col-end-10">Help us to achieve our goal of having a permanent memorial to those
                 Muslims who have fought and served during times of war.</p>
 
-                <button class="m-col-start-6 m-col-end-8">Donate Now</button>
+            <button class="m-col-start-6 m-col-end-8">Donate Now</button>
         </section>
 
         <section class="grid-con donation-section">
