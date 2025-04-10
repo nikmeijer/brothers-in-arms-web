@@ -1,0 +1,120 @@
+#site-footer {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+#footer-logo {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+}
+
+#footer-logo img {
+    width: 7em;
+}
+
+#footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#footer-nav-main,
+#footer-nav-secondary {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#footer-nav-main li,
+#footer-nav-secondary li {
+    margin-bottom: 10px;
+}
+
+#footer-nav-main a,
+#footer-nav-secondary a {
+    color: #454545;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#footer-nav-main a:hover,
+#footer-nav-secondary a:hover {
+    color: #be1e2d;
+}
+
+#footer-subscribe {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-subscribe form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#footer-subscribe input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    border: 2px solid #701a32;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000000;
+}
+
+#footer-subscribe input::placeholder {
+    color: #666;
+}
+
+#footer-subscribe input:focus {
+    outline: none;
+    border-color: #be1e2d;
+}
+
+#footer-subscribe button {
+    width: fit-content;
+    padding: 10px 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #701a32;
+    background-color: #701a32;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+    align-self: flex-start;
+}
+
+#footer-subscribe button:hover {
+    background-color: #be1e2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    #footer-nav-main a,
+    #footer-nav-secondary a {
+        font-size: 1em;
+    }
+
+    .footer-container {
+        margin-bottom: 20px;
+    }
+}
