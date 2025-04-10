@@ -1,0 +1,91 @@
+/* History Page Styling */
+#timeline-title {
+    margin: 40px 0;
+}
+
+#timeline-title h2 {
+    color: #701a32;
+    font-size: 4em;
+    text-align: center;
+    padding: 20px;
+}
+
+#timeline-title p {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+@media screen and (max-width: 768px) {
+    #timeline-title h2 {
+        font-size: 2em;
+    }
+}
+
+#1914-con,
+#1915-con,
+#1916-con,
+#1917-con,
+#1918-con,
+#victoriacross,
+#georgecross {
+    margin: 40px 0;
+}
+
+#1914-con h3,
+#1915-con h3,
+#1916-con h3,
+#1917-con h3,
+#1918-con h3,
+#victoriacross h3,
+#georgecross h3 {
+    color: #701a32;
+    font-size: 2.5em;
+    text-align: left;
+    padding: 10px 0;
+}
+
+#1914-con h4,
+#1915-con h4,
+#1916-con h4,
+#1917-con h4,
+#1918-con h4 {
+    color: #454545;
+    font-size: 1.5em;
+    text-align: left;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+#1914-con p,
+#1915-con p,
+#1916-con p,
+#1917-con p,
+#1918-con p,
+#victoriacross p,
+#georgecross p {
+    text-align: left;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 768px) {
+
+    #1914-con h3,
+    #1915-con h3,
+    #1916-con h3,
+    #1917-con h3,
+    #1918-con h3,
+    #victoriacross h3,
+    #georgecross h3 {
+        font-size: 2em;
+    }
+
+    #1914-con h4,
+    #1915-con h4,
+    #1916-con h4,
+    #1917-con h4,
+    #1918-con h4 {
+        font-size: 1.25em;
+    }
+}
