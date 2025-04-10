@@ -77,8 +77,16 @@ h3 {
     text-align: center;
 }
 
-#gallery-home {
-    padding: 2em 0;
+.gallery-home {
+    padding: 2em 20px;
+}
+
+.gallery-home h2{
+    text-align: left !important;
+}
+
+.gallery-home p{
+    margin-bottom: 20px;
 }
 
 
@@ -99,6 +107,7 @@ h3 {
 .see-all-button {
     background-color: #8B0021;
     color: white;
+    margin-top: 30px;
     padding: 0.75em 1.5em;
     text-decoration: none;
     font-weight: bold;
@@ -128,5 +137,13 @@ h3 {
 
     .donation-section{
         display: none;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Forces 3 images per row */
+        gap: 1em;
+        margin-top: 20px;
+
     }
 }

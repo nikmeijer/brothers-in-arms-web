@@ -1,10 +1,10 @@
 button {
     margin-top: 1em;
-    padding: 10px;
+    padding: 10px !important;
     font-weight: bold;
     border-radius: 0;
-    border: 2px;
-    background-color: #701a32;
+    border: 2px !important;
+    background-color: #701a32 !important;
     color: white;
     margin-bottom: 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -12,7 +12,7 @@ button {
     &:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
         cursor: pointer;
-        background-color: #be1e2d;
+        background-color: #be1e2d !important;
     }
 
 }

@@ -15,7 +15,6 @@
 #hero p {
     font-size: 1em;
     padding: 10px;
-    margin-left: 20px;
 }
 
 #hero button {
@@ -29,10 +28,10 @@
     margin-left: 28px;
 }
 
-#hero img {
-    margin: 10px;
-    padding-right: 2em;
+#hero p,a {
+    padding-left: 20px;
 }
+
 
 @media screen and (max-width: 768px) {
     #hero {
@@ -41,6 +40,10 @@
 
     #hero h2 {
         font-size: 2em;
+    }
+
+    #hero img {
+        margin-top: 50px;
     }
 
 }
