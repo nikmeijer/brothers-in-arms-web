@@ -1,6 +1,14 @@
-/* History Page Styling */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 #timeline-title {
     margin: 40px 0;
+    width: 100%;
+    max-width: 1200px;
 }
 
 #timeline-title h2 {
@@ -22,70 +30,128 @@
     }
 }
 
-#1914-con,
-#1915-con,
-#1916-con,
-#1917-con,
-#1918-con,
+#timeline {
+    margin: 40px 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media screen and (min-width: 769px) {
+    #timeline {
+        position: relative;
+    }
+
+    .timeline-entry:not(:last-child) {
+        border-right: 2px solid #701a32;
+        padding-right: 20px;
+    }
+
+    .timeline-entry:last-child {
+        padding-right: 20px;
+    }
+
+    .timeline-entry:first-child {
+        padding-left: 20px;
+    }
+
+    .timeline-year {
+        border-top: 2px solid #701a32;
+        padding-top: 20px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+.timeline-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    min-height: 600px;
+}
+
+.timeline-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-entry h3 {
+    color: #701a32;
+    font-size: 2.5em;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.timeline-entry h4 {
+    color: #454545;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.timeline-entry p {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1em;
+}
+
+.timeline-entry img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    padding: 20px 0;
+}
+
 #victoriacross,
 #georgecross {
     margin: 40px 0;
+    width: 100%;
+    max-width: 1200px;
 }
 
-#1914-con h3,
-#1915-con h3,
-#1916-con h3,
-#1917-con h3,
-#1918-con h3,
 #victoriacross h3,
 #georgecross h3 {
     color: #701a32;
     font-size: 2.5em;
-    text-align: left;
-    padding: 10px 0;
+    text-align: center;
+    padding: 20px 0;
 }
 
-#1914-con h4,
-#1915-con h4,
-#1916-con h4,
-#1917-con h4,
-#1918-con h4 {
-    color: #454545;
-    font-size: 1.5em;
-    text-align: left;
-    padding: 10px 0;
-    font-weight: bold;
-}
-
-#1914-con p,
-#1915-con p,
-#1916-con p,
-#1917-con p,
-#1918-con p,
 #victoriacross p,
 #georgecross p {
-    text-align: left;
-    padding: 10px 0;
+    text-align: center;
+    padding: 10px 20px;
     font-size: 1.1em;
 }
 
 @media screen and (max-width: 768px) {
-
-    #1914-con h3,
-    #1915-con h3,
-    #1916-con h3,
-    #1917-con h3,
-    #1918-con h3,
-    #victoriacross h3,
-    #georgecross h3 {
+    .timeline-entry h3 {
         font-size: 2em;
     }
 
-    #1914-con h4,
-    #1915-con h4,
-    #1916-con h4,
-    #1917-con h4,
-    #1918-con h4 {
+    .timeline-entry h4 {
         font-size: 1.25em;
+    }
+
+    .timeline-entry {
+        margin-bottom: 20px;
+        padding: 20px 10px;
+        min-height: auto;
+    }
+
+    #victoriacross h3,
+    #georgecross h3 {
+        font-size: 2em;
     }
 }
