@@ -766,9 +766,6 @@ span {
   }
 }
 #contact-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 40px 0;
 }
 
@@ -791,14 +788,10 @@ span {
   }
 }
 #contact-con {
-  display: flex;
-  justify-content: space-between;
   margin: 40px 0;
 }
 
 #contact-text {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 }
 
@@ -850,16 +843,12 @@ span {
 }
 
 #contact {
-  display: flex;
-  flex-direction: column;
   background-color: #fff;
   padding: 2em;
   width: 100%;
 }
 
 #contact form {
-  display: flex;
-  flex-direction: column;
   gap: 1em;
   width: 100%;
 }
@@ -930,6 +919,21 @@ span {
   align-self: flex-start;
 }
 
+.contact-donation-section {
+  margin-top: 20px;
+}
+
+.contact-donation-section h2 {
+  font-size: 3em;
+  text-align: left;
+}
+
+.contact-donation-section p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
 @media screen and (max-width: 768px) {
   #contact-con {
     flex-direction: column;
@@ -940,6 +944,9 @@ span {
   }
   #contact-text {
     margin-bottom: 20px;
+  }
+  .contact-donation-section {
+    display: none;
   }
 }
 h3 {
