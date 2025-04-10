@@ -32,9 +32,10 @@
     }
 })();
 
-// VUE + Swiper LOGIC
+// VUE + SWIPER LOGIC
 document.addEventListener('DOMContentLoaded', () => {
-    // EVENT PAGE VUE LOGIC
+
+    // EVENT SECTION
     const eventAppElement = document.querySelector("#eventApp");
     if (eventAppElement) {
         const app = Vue.createApp({
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         app.mount("#eventApp");
     }
 
-    // NEWS PAGE VUE LOGIC
+    // NEWS SECTION
     const newsAppElement = document.querySelector("#newsApp");
     if (newsAppElement) {
         const newsApp = Vue.createApp({
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newsApp.mount("#newsApp");
     }
 
-    // GALLERY PAGE VUE LOGIC
+    // GALLERY SECTION
     const galleryAppElement = document.querySelector("#galleryApp");
     if (galleryAppElement) {
         const galleryApp = Vue.createApp({
@@ -115,22 +116,46 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryApp.mount("#galleryApp");
     }
 
-    // LETTERS SWIPER INITIALIZATION
-    const letterSwiperEl = document.querySelector('.letter-swiper');
-    if (letterSwiperEl && typeof Swiper !== "undefined") {
-        const slides = letterSwiperEl.querySelectorAll('.swiper-slide');
-        if (slides.length > 1) {
-            new Swiper('.letter-swiper', {
-                loop: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-        }
+    // LETTERS SECTION
+    const lettersAppElement = document.querySelector("#lettersApp");
+    if (lettersAppElement) {
+        const lettersApp = Vue.createApp({
+            data() {
+                return {
+                    letters: [],
+                    error: ""
+                };
+            },
+            created() {
+                fetch("http://localhost/brother_in_arms-api/public/letters")
+                    .then(res => res.json())
+                    .then(data => {
+                        this.letters = data;
+                    })
+                    .catch(err => {
+                        this.error = "Failed to load letters.";
+                        console.error(err);
+                    });
+            },
+            mounted() {
+                this.$nextTick(() => {
+                    if (typeof Swiper !== "undefined") {
+                        new Swiper(".letter-swiper", {
+                            loop: true,
+                            navigation: {
+                                nextEl: ".swiper-button-next",
+                                prevEl: ".swiper-button-prev",
+                            },
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                        });
+                    }
+                });
+            }
+        });
+
+        lettersApp.mount("#lettersApp");
     }
 });

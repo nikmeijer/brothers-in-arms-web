@@ -55,13 +55,10 @@ h2 {
 }
 
 /* === Letter Swiper Section === */
-#letters-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 1rem;
-}
 
+#letters-home h2{
+    text-align: left;
+}
 .letter-swiper {
     position: relative;
     background-color: #fff;
@@ -72,43 +69,27 @@ h2 {
     border: 1px solid #aaa;
     max-width: 1000px;
     width: 100%;
-    margin: 0 auto;
-    padding: 2rem 3rem;
+    margin: 2rem auto;
+    padding: 3rem 5rem;
     box-sizing: border-box;
-}
-
-.letter-slide {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 2rem;
-    width: 100%;
     min-height: 350px;
 }
 
-.letter-img {
-    flex: 0 0 45%;
-    max-width: 45%;
-    height: auto;
-    border-radius: 6px;
-    object-fit: contain;
+.letter-slide {
+    text-align: center;
+    height: 100%;
+    margin-top: 25px;
 }
 
 .letter-text {
-    flex: 0 0 50%;
-    max-width: 50%;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.8;
     color: #111;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-bottom: 1.5rem; /* Space between text and author */
 }
 
 .letter-author {
-    margin-top: 1.5rem;
     font-weight: bold;
     color: #8B0021;
     font-size: 1rem;
@@ -118,11 +99,11 @@ h2 {
     display: block;
     font-weight: normal;
     font-size: 0.95rem;
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
     color: #555;
 }
 
-/* Arrows (your original style) */
+/* === Swiper Arrows — untouched === */
 .swiper-button-prev,
 .swiper-button-next {
     position: absolute;
@@ -161,7 +142,7 @@ h2 {
     content: "→";
 }
 
-/* Mobile */
+/* === Mobile Responsive === */
 @media (max-width: 768px) {
     .letter-slide {
         flex-direction: column;

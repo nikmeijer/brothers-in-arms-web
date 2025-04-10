@@ -98,44 +98,28 @@
             <section id="model-viewer-con" class="col-span-full"></section>
         </section>
 
-        <section id="letters-home">
-            <h2>Letters from the soldiers who sacrificed their lives in the war!</h2>
-        
-            <div class="swiper letter-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide letter-slide">
-                        <img src="images/letter_1.png" alt="Letter 1" class="letter-img">
-                        <div class="letter-text">
-                          <p>“Tell my mother not to go wandering madly because...”</p>
-                          <p class="letter-author">A wounded Sikh to his father<br><span>January 18th, 1915</span></p>
-                        </div>
-                      </div>
-        
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide letter-slide">
-                        <img src="images/letter.png.jpg" alt="Letter 2" class="letter-img">
-                        <div class="letter-text">
-                            <p>“Tell my mother not to go wandering madly because her son, my brother, is dead...”</p>
-                            <p class="letter-author">A wounded Sikh to his father<br><span>January 18th, 1915</span></p>
-                        </div>
-                    </div>
-        
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide letter-slide">
-                        <img src="images/letter.png" alt="Letter 3" class="letter-img">
-                        <div class="letter-text">
-                            <p>GG</p>
-                            <p class="letter-author">A wounded Sikh to his father<br><span>January 18th, 1915</span></p>
-                        </div>
-                    </div>
+        <section id="letters-home" class="grid-con">
+            <h2 class="col-span-full m-col-span-full">Letters From The Soldiers</h2>
+            <p class="col-span-full m-col-span-full">
+              Letters from the soldiers who sacrificed their lives in the war!
+            </p>
+          
+            <div id="lettersApp" class="swiper letter-swiper col-span-full m-col-start-3 m-col-end-11">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide letter-slide" v-for="letter in letters" :key="letter.id">
+                  <div class="letter-text">
+                    <p>“{{ letter.description }}”</p>
+                    <p class="letter-author">{{ letter.sender }}<br><span>{{ letter.date }}</span></p>
+                  </div>
                 </div>
-        
-                <!-- Arrows -->
-                <div class="swiper-button-prev custom-arrow"></div>
-                <div class="swiper-button-next custom-arrow"></div>
+              </div>
+          
+              <!-- Arrows -->
+              <div class="swiper-button-prev custom-arrow"></div>
+              <div class="swiper-button-next custom-arrow"></div>
             </div>
-        </section>
+          </section>
+          
         
         
         
