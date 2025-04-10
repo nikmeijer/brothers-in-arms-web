@@ -13,7 +13,7 @@
         rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
@@ -101,28 +101,28 @@
         <section id="letters-home" class="grid-con">
             <h2 class="col-span-full m-col-span-full">Letters From The Soldiers</h2>
             <p class="col-span-full m-col-span-full">
-              Letters from the soldiers who sacrificed their lives in the war!
+                Letters from the soldiers who sacrificed their lives in the war!
             </p>
-          
+
             <div id="lettersApp" class="swiper letter-swiper col-span-full m-col-start-3 m-col-end-11">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide letter-slide" v-for="letter in letters" :key="letter.id">
-                  <div class="letter-text">
-                    <p>“{{ letter.description }}”</p>
-                    <p class="letter-author">{{ letter.sender }}<br><span>{{ letter.date }}</span></p>
-                  </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide letter-slide" v-for="letter in letters" :key="letter.id">
+                        <div class="letter-text">
+                            <p>“{{ letter.description }}”</p>
+                            <p class="letter-author">{{ letter.sender }}<br><span>{{ letter.date }}</span></p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-          
-              <!-- Arrows -->
-              <div class="swiper-button-prev custom-arrow"></div>
-              <div class="swiper-button-next custom-arrow"></div>
+
+                <!-- Arrows -->
+                <div class="swiper-button-prev custom-arrow"></div>
+                <div class="swiper-button-next custom-arrow"></div>
             </div>
-          </section>
-          
-        
-        
-        
+        </section>
+
+
+
+
 
         <section class="grid-con" id="callstoaction">
             <h2 class="hidden">Calls to Action</h2>
@@ -174,7 +174,44 @@
 
     </main>
 
-    <footer>
+    <footer class="full-width-grid-con" id="site-footer">
+        <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12" id="footer-logo">
+            <a href="index.html">
+                <img src="images/BIA-Logo_colour.svg" alt="Brothers in Arms Logo">
+            </a>
+        </div>
+
+        <div class="grid-con" id="footer-content">
+            <div class="col-span-2 m-col-span-4 l-col-span-4 xl-col-span-4 footer-container"
+                id="footer-nav-main-container">
+                <ul id="footer-nav-main">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 m-col-span-4 l-col-span-4 xl-col-span-4 footer-container"
+                id="footer-nav-secondary-container">
+                <ul id="footer-nav-secondary">
+                    <li><a href="*">Terms & Conditions</a></li>
+                    <li><a href="*">Sitemap</a></li>
+                    <li><a href="*">Donate</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 footer-container"
+                id="footer-subscribe-container">
+                <div id="footer-subscribe">
+                    <form method="post" action="*">
+                        <input type="email" id="newsletter" name="newsletter" placeholder="Subscribe to our newsletter!"
+                            required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
