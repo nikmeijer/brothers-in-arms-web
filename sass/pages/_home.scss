@@ -8,26 +8,22 @@ h2 {
     font-size: 2em;
 }
 
+/* === Home Section Styling === */
 #explore-home {
     margin-top: 20px;
 }
 
 #explore-stories h2 {
-    font-size: 2em
+    font-size: 2em;
 }
 
-#explore-home p {
-    padding: 10px;
-}
-
-#about-home p {
-    padding: 10px;
-}
-
+#explore-home p,
+#about-home p,
 #letters-home p {
     padding: 10px;
 }
 
+/* === Calls to Action === */
 #calltoact-con {
     padding: 10px;
     display: inline-block;
@@ -38,22 +34,13 @@ h2 {
 }
 
 #calltoact-con button {
-    padding: 10px;
-}
-
-#letters-home {
-    display: flex;
-    flex-direction: column;
-}
-
-#calltoact-con button {
-
-    border: 2px;
+    border: none;
     border-radius: 5px;
     padding: 8px;
     background-color: #701a32;
     color: white;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 #calltoact-con button a {
@@ -63,9 +50,112 @@ h2 {
 }
 
 #calltoact-con button:hover {
-    border: 2px;
-    border-radius: 5px;
-    padding: 8px;
     background-color: #be1e2d;
     color: white;
+}
+
+/* === Letter Swiper Section === */
+
+#letters-home h2{
+    text-align: left;
+}
+.letter-swiper {
+    position: relative;
+    background-color: #fff;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    border: 1px solid #aaa;
+    max-width: 1000px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 3rem 5rem;
+    box-sizing: border-box;
+    min-height: 350px;
+}
+
+.letter-slide {
+    text-align: center;
+    height: 100%;
+    margin-top: 25px;
+}
+
+.letter-text {
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #111;
+    margin-bottom: 1.5rem; /* Space between text and author */
+}
+
+.letter-author {
+    font-weight: bold;
+    color: #8B0021;
+    font-size: 1rem;
+}
+
+.letter-author span {
+    display: block;
+    font-weight: normal;
+    font-size: 0.95rem;
+    margin-top: 0.3rem;
+    color: #555;
+}
+
+/* === Swiper Arrows — untouched === */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.custom-arrow {
+    background-color: #8B0021;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-prev::before {
+    content: "←";
+}
+
+.swiper-button-next::before {
+    content: "→";
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+    .letter-slide {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .letter-img,
+    .letter-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .letter-text {
+        padding-top: 1rem;
+    }
 }

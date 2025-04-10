@@ -32,8 +32,10 @@
     }
 })();
 
-// VUE LOGIC FOR EVENT PAGE
+// VUE + SWIPER LOGIC
 document.addEventListener('DOMContentLoaded', () => {
+
+    // EVENT SECTION
     const eventAppElement = document.querySelector("#eventApp");
     if (eventAppElement) {
         const app = Vue.createApp({
@@ -62,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         app.mount("#eventApp");
     }
 
-    // VUE LOGIC FOR NEWS PAGE
+    // NEWS SECTION
     const newsAppElement = document.querySelector("#newsApp");
     if (newsAppElement) {
         const newsApp = Vue.createApp({
@@ -88,28 +90,72 @@ document.addEventListener('DOMContentLoaded', () => {
         newsApp.mount("#newsApp");
     }
 
+    // GALLERY SECTION
     const galleryAppElement = document.querySelector("#galleryApp");
     if (galleryAppElement) {
-      const galleryApp = Vue.createApp({
-        data() {
-          return {
-            gallery: [],
-            error: ""
-          };
-        },
-        created() {
-          fetch("http://localhost/brother_in_arms-api/public/gallery")
-            .then(res => res.json())
-            .then(data => {
-              this.gallery = data;
-            })
-            .catch(err => {
-              this.error = "Failed to load gallery.";
-              console.error(err);
-            });
-        }
-      });
+        const galleryApp = Vue.createApp({
+            data() {
+                return {
+                    gallery: [],
+                    error: ""
+                };
+            },
+            created() {
+                fetch("http://localhost/brother_in_arms-api/public/gallery")
+                    .then(res => res.json())
+                    .then(data => {
+                        this.gallery = data;
+                    })
+                    .catch(err => {
+                        this.error = "Failed to load gallery.";
+                        console.error(err);
+                    });
+            }
+        });
 
-      galleryApp.mount("#galleryApp");
+        galleryApp.mount("#galleryApp");
+    }
+
+    // LETTERS SECTION
+    const lettersAppElement = document.querySelector("#lettersApp");
+    if (lettersAppElement) {
+        const lettersApp = Vue.createApp({
+            data() {
+                return {
+                    letters: [],
+                    error: ""
+                };
+            },
+            created() {
+                fetch("http://localhost/brother_in_arms-api/public/letters")
+                    .then(res => res.json())
+                    .then(data => {
+                        this.letters = data;
+                    })
+                    .catch(err => {
+                        this.error = "Failed to load letters.";
+                        console.error(err);
+                    });
+            },
+            mounted() {
+                this.$nextTick(() => {
+                    if (typeof Swiper !== "undefined") {
+                        new Swiper(".letter-swiper", {
+                            loop: true,
+                            navigation: {
+                                nextEl: ".swiper-button-next",
+                                prevEl: ".swiper-button-prev",
+                            },
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                        });
+                    }
+                });
+            }
+        });
+
+        lettersApp.mount("#lettersApp");
     }
 });
