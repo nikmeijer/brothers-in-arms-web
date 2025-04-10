@@ -67,16 +67,12 @@ h2 {
 /* === Calls to Action === */
 .calltoact-con {
     padding: 10px;
-    display: inline-block;
     background-color: white;
     margin: 1em;
     padding: 2em;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-#calltoact-con p {
-    padding: 10px;
-}
 
 #calltoact-con button {
     border: none;
@@ -183,6 +179,10 @@ h2 {
 
 .swiper-button-next::before {
     content: "→";
+}
+
+#callstoaction a {
+    margin-top: 20px;
 }
 
 /* === Mobile Responsive === */
