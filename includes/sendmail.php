@@ -55,7 +55,7 @@ if(empty($errors)) {
             mail($to, $email_subject, $email_body);
 
             ob_end_clean();
-            header('Location: /brothers-in-arms-web/contact.html?success=1#contact');
+            header('Location: /brothers-in-arms-web/contact.php?success=1#contact');
 
             exit;
         } else {
