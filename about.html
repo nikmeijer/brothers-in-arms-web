@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brothers in Arms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sedgwick+Ave&display=swap"
+        rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/video.js"></script>
+</head>
+
+<body>
+    <h1 class="hidden">Brothers in Arms</h1>
+
+    <header class="full-width-grid-con">
+        <h2 class="hidden">Header</h2>
+        <div id="logo" class="col-start-2 col-end-2">
+            <a href="index.html">
+                <img src="images/BIA-Logo_colour.svg" alt="Logo">
+            </a>
+        </div>
+        <nav class="m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13 xl-col-start-10 xl-col-end-13">
+            <h2 class="hidden">Nav</h2>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="*" class="donate-nav">Donate Now</a></li>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-nav" class="col-start-3 col-end-5 mobile">
+            <input type="checkbox" id="overlay-input">
+            <label for="overlay-input" id="overlay-button"><span></span></label>
+            <div id="overlay">
+                <ul>
+                    <h2 class="hidden">Nav</h2>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="*" class="donate-nav">Donate Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="full-width-grid-con" id="about-hero">
+            <h2 class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11">
+                Historical Context</h2>
+            <p class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11">
+                Over
+                135,000 (of a total of 1.3 Million) Indian Army Corps soldiers fought alongside Canadian soldiers in
+                Europe
+                that included but not limited to – Ypres, St Julian, Festubert, The Somme, Vimy. The memorial will
+                provide a
+                site for quiet reflection and inspiration, reminding future generations of the selfless sacrifice and
+                valour
+                of our ancestors, Indians & Canadian soldier</p>
+            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 about-hero-images">
+                <img class="col-span-4 m-col-span-4" src="images/placeholder1.jpg" alt="Historical image 1">
+                <img class="col-span-4 m-col-span-4" src="images/placeholder2.jpg" alt="Historical image 2">
+                <img class="col-span-4 m-col-span-4" src="images/placeholder3.jpg" alt="Historical image 3">
+            </div>
+        </section>
+
+        <section class="grid-con" id="about-video">
+            <div
+                class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11 video-wrapper">
+                <h2>Drone Footage</h2>
+                <p>Over 135,000 (of a total of 1.3 Million) Indian Army Corps soldiers fought alongside Canadian
+                    soldiers in
+                    Europe that included but not limited to – Ypres, St Julian, Festubert, The Somme, Vimy.</p>
+                <section id="player-container">
+                    <video class="player" controls data-poster="images/placeholder.jpg">
+                        <source src="videos/meijer_nikolai_demo-reel.mp4" type="video/mp4">
+                        <p>Your browser does not support the video tag.</p>
+                    </video>
+                    <div class="video-controls hidden" id="video-controls">
+                        <button id="play-button"><i class="fa fa-play-circle-o"></i></button>
+                        <button id="pause-button"><i class="fa fa-pause-circle-o"></i></button>
+                        <button id="stop-button"><i class="fa fa-stop-circle-o"></i></button>
+                        <i class="fa fa-volume-up"></i>
+                        <input type="range" id="change-vol" step="0.01" min="0" max="1" value="1">
+                        <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="grid-con" id="about-park">
+            <div class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6 about-text">
+                <h2>About the park</h2>
+                <p><span>Phase 1 Completed on May 26th, 2018:</span> Funding and planting 108 Trees – a mix of Deciduous
+                    trees and Conifers from the same family of trees found in the sub-Himalayan climes.</p>
+                <p>The site is located on Veterans Memorial Parkway in London, Ontario, less than a 2-minute drive from
+                    401
+                    West, on the Toronto to Windsor section of the 401 Freeway. Click here to view the site at the South
+                    West corner of the intersection of Veteran’s Memorial Parkway and Hamilton Road.</p>
+                <p>The site is public land, owned by the City of London. 108 Trees planted in rows and columns similar
+                    to
+                    soldiers in a formation make up a “Living Guard of Honour” while a Stone feature will make up the
+                    memorial.</p>
+            </div>
+            <div class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6">
+                <img src="images/placeholder4.jpg" alt="Park image">
+            </div>
+        </section>
+
+        <section class="grid-con" id="about-mission">
+            <div class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6 about-text">
+                <h2>Mission and Values</h2>
+                <ul>
+                    <li>To commemorate the valour of Indian and Canadian Brothers In Arms, to inspire future generations
+                        to
+                        uphold values of humanity and freedom.</li>
+                    <li>This memorial highlights the forgotten story of the collaboration between the Indian & Canadian
+                        soldiers who fought side by side, at the Western Front, in Europe.</li>
+                    <li>Bring forward shared personal experiences of battle, challenges, emotions and triumph.</li>
+                    <li>To reflect on the lessons from the stories of heroism, sacrifices and voices of liberation.</li>
+                </ul>
+            </div>
+            <div class="col-span-4 m-col-span-6 l-col-span-6 xl-col-span-6">
+                <img src="images/placeholder5.jpg" alt="Mission image">
+            </div>
+        </section>
+
+        <section class="grid-con" id="about-cta">
+            <h3 class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11">
+                Our
+                Supporters – Phase 1 (1 Tree or More)</h3>
+            <h2
+                class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11 primary">
+                40+ Donors</h2>
+            <h3 class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11">We
+                would like to add you on our list!</h3>
+            <h2
+                class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11 secondary">
+                Make a donation</h2>
+            <p class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11">
+                Help us
+                to achieve our goal of having a permanent memorial to those who have fought and served during times of
+                war.
+            </p>
+            <button
+                class="col-span-2 m-col-start-5 m-col-end-9 l-col-start-5 l-col-end-9 xl-col-start-5 xl-col-end-9 donate-btn"><a
+                    href="*">Donate Now</a></button>
+            <h2
+                class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11 secondary">
+                Give as you Live</h2>
+            <p class="col-span-4 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11">We
+                are
+                registered with <a href="*">Give as you Live.</a> This means we will receive a small donation if you do
+                your
+                online shopping via Give as you Live. You can sign up to support us via <a href="*">this link</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+
+</html>

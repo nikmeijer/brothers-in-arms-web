@@ -13,7 +13,9 @@
         rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -33,7 +35,6 @@
             <li><a href="about.html">About</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="event.html">Events</a></li>
-            <li><a href="donations.html">Donations</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="*" class="donate-nav">Donate Now</a></li>
         </nav>
@@ -48,7 +49,6 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="history.html">History</a></li>
                     <li><a href="event.html">Events</a></li>
-                    <li><a href="donations.html">Donations</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="*" class="donate-nav">Donate Now</a></li>
                 </ul>
@@ -98,28 +98,31 @@
             <section id="model-viewer-con" class="col-span-full"></section>
         </section>
 
-        <section class="grid-con" id="letters-home">
-            <h2 class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">Letters from the Soldiers</h2>
-            <h3 class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">Learn their story and get to know
-                them.</h3>
-            <div id="letter-con" class="letter-con col-span-full m-col-span-full l-col-span-full xl-col-span-full">
-                <img src="images/image-4.jpg" alt="Letter" class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6">
-                <div id="letter-copy" class="col-span-2 m-col-span-6 l-col-span-6 xl-col-span-6">
-                    <p>“Tell my mother not to go wandering madly because her son, my brother, is
-                        dead. To
-                        be born
-                        and to die is God's order. Some day we must die, sooner or later, and if I die here, who
-                        will
-                        remember me?
-                        It is a fine thing to die far from home. A saint said this, and, as he was a good man, it
-                        must
-                        be
-                        true.”</p>
-                    <p>A wounded Sikh soldier for the British-Indian army,<br>18 January, 1915</p>
+        <section id="letters-home" class="grid-con">
+            <h2 class="col-span-full m-col-span-full">Letters From The Soldiers</h2>
+            <p class="col-span-full m-col-span-full">
+              Letters from the soldiers who sacrificed their lives in the war!
+            </p>
+          
+            <div id="lettersApp" class="swiper letter-swiper col-span-full m-col-start-3 m-col-end-11">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide letter-slide" v-for="letter in letters" :key="letter.id">
+                  <div class="letter-text">
+                    <p>“{{ letter.description }}”</p>
+                    <p class="letter-author">{{ letter.sender }}<br><span>{{ letter.date }}</span></p>
+                  </div>
                 </div>
+              </div>
+          
+              <!-- Arrows -->
+              <div class="swiper-button-prev custom-arrow"></div>
+              <div class="swiper-button-next custom-arrow"></div>
             </div>
-            <button class="col-span-2"><a href="about.html#mission">See the Directory</a></button>
-        </section>
+          </section>
+          
+        
+        
+        
 
         <section class="grid-con" id="callstoaction">
             <h2 class="hidden">Calls to Action</h2>
@@ -146,28 +149,29 @@
             </div>
         </section>
 
-        
-            <div id="galleryApp">
-                <section class="grid-con" id="gallery-home">
-                  <h2 class="col-span-full" style="color: #8B0021;">Gallery</h2>
-                  <p class="col-span-full">
-                    "A picture is worth a thousand words. Here, we showcase photos and videos from the memorial's development, historical archives, and past events."
-                  </p>
-              
-                  <div class="col-span-full gallery-grid">
-                    <img v-for="image in gallery" :src="'images/' + image.images" :alt="'Gallery Image ' + image.id" />
-                  </div>
-              
-                  <div class="col-span-full" style="text-align: right; margin-top: 1em;">
-                    <a href="gallery.html" class="see-all-button">See all</a>
-                  </div>
-                </section>
-              
-                <div v-if="error" class="col-span-full error">{{ error }}</div>
-              </div>
-              
 
-        
+        <div id="galleryApp">
+            <section class="grid-con" id="gallery-home">
+                <h2 class="col-span-full" style="color: #8B0021;">Gallery</h2>
+                <p class="col-span-full">
+                    "A picture is worth a thousand words. Here, we showcase photos and videos from the memorial's
+                    development, historical archives, and past events."
+                </p>
+
+                <div class="col-span-full gallery-grid">
+                    <img v-for="image in gallery" :src="'images/' + image.images" :alt="'Gallery Image ' + image.id" />
+                </div>
+
+                <div class="col-span-full" style="text-align: right; margin-top: 1em;">
+                    <a href="gallery.html" class="see-all-button">See all</a>
+                </div>
+            </section>
+
+            <div v-if="error" class="col-span-full error">{{ error }}</div>
+        </div>
+
+
+
     </main>
 
     <footer>
