@@ -13,7 +13,7 @@
         rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
@@ -22,7 +22,7 @@
 <body>
     <h1 class="hidden">Brothers in Arms</h1>
 
-    <div class="header-back">
+
     <header class="full-width-grid-con real-header">
         <h2 class="hidden">Header</h2>
         <div id="logo" class="col-start-2 col-end-2">
@@ -38,7 +38,8 @@
             <li><a href="news.html">News</a></li>
             <li><a href="event.html">Events</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="gallery.html" class="see-all-button m-col-start-6 m-col-end-8">Donate Now</a></li>
+            <li><a href="contact.php" class="see-all-button m-col-start-6 m-col-end-8">Donate Now</a></li>
+            <!--temporary placeholder link redirect to contact page, anyone with questions and some critical thinking skills who are really interested will reach out to find out until proper link is set up-->
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-nav" class="col-start-3 col-end-5 mobile">
@@ -53,33 +54,36 @@
                     <li><a href="news.html">News</a></li>
                     <li><a href="event.html">Events</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                    <li><a href="gallery.html" class="see-all-button m-col-start-6 m-col-end-8">Donate Now</a></li>
+                    <li><a href="contact.php" class="see-all-button m-col-start-6 m-col-end-8">Donate Now</a></li>
                 </ul>
             </div>
         </div>
     </header>
-</div>
+
     <main>
         <section class="grid-con" id="hero">
             <div id="hero-left" class="col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 ">
-                <h2 class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-6 ">Honouring the Unsung Heroes of World
+                <h2 class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-6 ">Honouring the Unsung
+                    Heroes of World
                     War 1
                 </h2>
-                <p class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-6 ">A tribute to the bravery and
+                <p class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-6 ">A tribute to the bravery
+                    and
                     sacrifice<br>of Indian soldiers who served in<br>the Great War.</p>
                 <a href="gallery.html" class="see-all-button col-span-2 m-col-span-2 ">Explore Stories</a>
                 <a href="gallery.html" class="see-all-button col-span-2 m-col-span-2 ">View Memorials</a>
             </div>
-            <img class="col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" src='images/image.jpg' alt="Photo stack">
+            <img class="col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" src='images/home-hero.jpg'
+                alt="soldiers">
         </section>
- 
+
         <section class="grid-con" id="explore-home">
             <div id="explore-stories" class="col-span-full m-col-span-6 l-col-span-6 xl-col-span-6">
                 <h2>Empowering Lives through Compassion</h2>
                 <p>A tribute to the bravery and sacrifice of Indian soldiers who served in The
                     Great
                     War.</p>
-                <a href="gallery.html" class="see-all-button m-col-span-2 ">Explore Stories</a>
+                <a href="history.html" class="see-all-button m-col-span-2 ">Explore Stories</a>
             </div>
             <img class="col-span-full m-col-span-6 l-col-span-6 xl-col-span-6" src="images/image-1.jpg" alt="">
             <img class="col-span-full m-col-span-6 l-col-span-6 xl-col-span-6" src="images/image-2.jpg" alt="">
@@ -88,41 +92,42 @@
 
         <section class="grid-con" id="about-home">
             <h2 class="col-span-full m-col-span-full">About the Memorial</h2>
-            <p class="col-span-full m-col-span-full">"Over a million Indian soldiers served during World War I, often alongside Canadian
+            <p class="col-span-full m-col-span-full">"Over a million Indian soldiers served during World War I, often
+                alongside Canadian
                 troops,
                 in crucial battles across Europe. At places like Ypres and the Somme, Indian and Canadian soldiers
                 fought side
                 by side, strengthening the Allied forces and demonstrating unity in the face of adversity. The Brothers
                 in Arms
                 Memorial commemorates their shared history and sacrifices."</p>
-                <a href="gallery.html" class="see-all-button col-span-2 m-col-span-2">Our Mission</a>  
+            <a href="gallery.html" class="see-all-button col-span-2 m-col-span-2">Our Mission</a>
         </section>
 
         <section id="letters-home" class="grid-con">
             <h2 class="col-span-full m-col-span-full">Letters From The Soldiers</h2>
             <p class="col-span-full m-col-span-full">
-              Letters from the soldiers who sacrificed their lives in the war!
+                Letters from the soldiers who sacrificed their lives in the war!
             </p>
-          
+
             <div id="lettersApp" class="swiper letter-swiper col-span-full m-col-start-3 m-col-end-11">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide letter-slide" v-for="letter in letters" :key="letter.id">
-                  <div class="letter-text">
-                    <p>“{{ letter.description }}”</p>
-                    <p class="letter-author">{{ letter.sender }}<br><span>{{ letter.date }}</span></p>
-                  </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide letter-slide" v-for="letter in letters" :key="letter.id">
+                        <div class="letter-text">
+                            <p>“{{ letter.description }}”</p>
+                            <p class="letter-author">{{ letter.sender }}<br><span>{{ letter.date }}</span></p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-          
-              <!-- Arrows -->
-              <div class="swiper-button-prev custom-arrow"></div>
-              <div class="swiper-button-next custom-arrow"></div>
+
+                <!-- Arrows -->
+                <div class="swiper-button-prev custom-arrow"></div>
+                <div class="swiper-button-next custom-arrow"></div>
             </div>
-          </section>
-          
-        
-        
-        
+        </section>
+
+
+
+
 
         <section class="grid-con" id="callstoaction">
             <h2 class="hidden">Calls to Action</h2>
@@ -131,39 +136,39 @@
                 <p>"Your contribution is essential in bringing this memorial to life. Donations will fund the
                     construction and
                     installation of the memorial, as well as ongoing maintenance and educational programs."</p>
-                    <a href="gallery.html" class="see-all-button">Donate Now</a>
+                <a href="gallery.html" class="see-all-button">Donate Now</a>
             </div>
             <div class="calltoact-con col-span-4">
                 <h3>Volunteer Options</h3>
                 <p>"Become a part of the movement to preserve this important history. Volunteers can help with
                     fundraising,
                     events, and educational outreach."</p>
-                    <a href="gallery.html" class="see-all-button">Sign Up With Us</a>
+                <a href="gallery.html" class="see-all-button">Sign Up With Us</a>
             </div>
             <div class="calltoact-con col-span-4">
                 <h3>Partners</h3>
                 <p>"We are working with various organizations, governments, and institutions to bring this memorial to
                     life. If
                     you represent an organization interested in collaborating, please contact us."</p>
-                    <a href="gallery.html" class="see-all-button">Talk to Us</a>
+                <a href="gallery.html" class="see-all-button">Talk to Us</a>
             </div>
         </section>
 
 
         <section id="galleryApp" class="grid-con gallery-home">
-                <h2 class="col-span-full" style="color: #8B0021;">Gallery</h2>
-                <p class="col-span-full m-col-start-1 m-col-end-8">
-                    "A picture is worth a thousand words. Here, we showcase photos and videos from the memorial's
-                    development, historical archives, and past events."
-                </p>
+            <h2 class="col-span-full" style="color: #8B0021;">Gallery</h2>
+            <p class="col-span-full m-col-start-1 m-col-end-8">
+                "A picture is worth a thousand words. Here, we showcase photos and videos from the memorial's
+                development, historical archives, and past events."
+            </p>
 
-                <div class="col-span-2 m-col-start-11 m-col-end-13">
-                    <a href="gallery.html" class="see-all-button">See all</a>
-                </div>
+            <div class="col-span-2 m-col-start-11 m-col-end-13">
+                <a href="gallery.html" class="see-all-button">See all</a>
+            </div>
 
-                <div class="col-span-full gallery-grid">
-                    <img v-for="image in gallery" :src="'images/' + image.images" :alt="'Gallery Image ' + image.id" />
-                </div>
+            <div class="col-span-full gallery-grid">
+                <img v-for="image in gallery" :src="'images/' + image.images" :alt="'Gallery Image ' + image.id" />
+            </div>
 
             <div v-if="error" class="col-span-full error">{{ error }}</div>
         </section>
@@ -173,59 +178,58 @@
             <p class="m-col-start-4 m-col-end-10">Help us to achieve our goal of having a permanent memorial to those
                 Muslims who have fought and served during times of war.</p>
 
-                <a href="gallery.html" class="see-all-button m-col-start-6 m-col-end-8">Donate Now</a>
+            <a href="contact.php" class="see-all-button m-col-start-6 m-col-end-8">Donate Now</a>
         </section>
 
         <section class="grid-con donation-section">
             <h2 class="m-col-span-full">Give as you Live</h2>
-            <p class="m-col-start-4 m-col-end-10">We are registered with <a href="*">Give as you Live. </a>This means we
+            <p class="m-col-start-4 m-col-end-10">We are registered with <a href="https://www.giveasyoulive.com/">Give
+                    as you Live. </a>This means we
                 will
                 receive a small donation if you do your online shopping via Give as you Live. You can sign up to support
-                us via <a href="*">this link</a>.</p>
+                us via <a href="https://www.giveasyoulive.com/">this link</a>.</p>
         </section>
 
 
 
     </main>
     <div id="site-footer">
-        <footer class="grid-con" >
+        <footer class="grid-con">
             <div class="col-span-4 m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5" id="footer-logo">
                 <a href="index.html">
                     <img src="images/BIA_LOGO_COLOUR.png" alt="Logo">
                 </a>
             </div>
-    
-       
-                <div class="col-span-2 m-col-start-1 m-col-end-5  footer-container"
-                    id="footer-nav-main-container">
-                    <ul id="footer-nav-main">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="history.html">History</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
+
+
+            <div class="col-span-2 m-col-start-1 m-col-end-5  footer-container" id="footer-nav-main-container">
+                <ul id="footer-nav-main">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 m-col-start-6 m-col-end-9 footer-container" id="footer-nav-secondary-container">
+                <ul id="footer-nav-secondary">
+                    <li><a href="*">Terms & Conditions</a></li>
+                    <li><a href="*">Sitemap</a></li>
+                    <li><a href="*">Donate</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 footer-container"
+                id="footer-subscribe-container">
+                <div id="footer-subscribe">
+                    <form method="post" action="*">
+                        <input type="email" id="newsletter" name="newsletter" placeholder="Subscribe to our newsletter!"
+                            required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
-    
-                <div class="col-span-2 m-col-start-6 m-col-end-9 footer-container"
-                    id="footer-nav-secondary-container">
-                    <ul id="footer-nav-secondary">
-                        <li><a href="*">Terms & Conditions</a></li>
-                        <li><a href="*">Sitemap</a></li>
-                        <li><a href="*">Donate</a></li>
-                    </ul>
-                </div>
-    
-                <div class="col-span-4 m-col-span-4 l-col-span-4 xl-col-span-4 footer-container"
-                    id="footer-subscribe-container">
-                    <div id="footer-subscribe">
-                        <form method="post" action="*">
-                            <input type="email" id="newsletter" name="newsletter" placeholder="Subscribe to our newsletter!"
-                                required>
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-         
+            </div>
+
         </footer>
     </div>
 

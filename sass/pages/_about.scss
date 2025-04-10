@@ -2,6 +2,15 @@
     margin: 20px auto;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 #about-hero {
     display: flex;
     flex-direction: column;
@@ -113,8 +122,12 @@ button {
 
 #about-park {
     display: flex;
-    align-items: flex-start;
-    margin: 40px 0;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    margin: 1em;
+    padding: 2em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
@@ -151,23 +164,27 @@ button {
 }
 
 #about-park img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    align-self: flex-end;
+    height: max-content;
     object-fit: cover;
+    justify-self: right;
 }
 
 #about-mission {
     display: flex;
     align-items: flex-start;
     margin: 40px 0;
+    background-color: white;
+    margin: 1em;
+    padding: 2em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 #about-mission img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    align-self: flex-end;
+    height: max-content;
     object-fit: cover;
+    justify-self: right;
 }
 
 #about-park>div:last-child,
@@ -181,9 +198,8 @@ button {
 #about-park img:not([src]),
 #about-mission img[src=""],
 #about-mission img:not([src]) {
-    min-height: 200px;
-    display: flex;
-    align-items: center;
+    align-self: right;
+    height: max-content;
     justify-content: center;
     background-color: #f0f0f0;
     color: #666;
@@ -273,4 +289,8 @@ button {
 #about-cta p a {
     color: #701a32;
     text-decoration: underline;
+}
+
+#galleryApp {
+    color: #701a32;
 }
