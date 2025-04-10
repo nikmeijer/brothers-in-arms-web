@@ -1,6 +1,11 @@
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: #ffefd9;
+    background-color: #fff;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        background-size: 40px 40px;
+    
 }
 
 h2 {
@@ -9,12 +14,44 @@ h2 {
 }
 
 /* === Home Section Styling === */
+
+#hero-left p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left !important;
+}
+
+#hero-left h2{
+    text-align: left !important;
+    font-size: 2.5em !important;
+    
+}
+
 #explore-home {
     margin-top: 20px;
 }
 
+#explore-home a{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#explore-home img {
+    margin-top: 20px;
+}
+
+#explore-home p {
+    margin-bottom: 20px;
+}
+
+#about-home h2{
+    text-align: left;
+}
+
+
 #explore-stories h2 {
     font-size: 2em;
+
 }
 
 #explore-home p,
@@ -61,12 +98,8 @@ h2 {
 }
 .letter-swiper {
     position: relative;
-    background-color: #fff;
-    background-image:
-        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
     border: 1px solid #aaa;
+    background-color: #ffffff;
     max-width: 1000px;
     width: 100%;
     margin: 2rem auto;
