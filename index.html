@@ -22,7 +22,8 @@
 <body>
     <h1 class="hidden">Brothers in Arms</h1>
 
-    <header class="full-width-grid-con">
+    <div class="header-back">
+    <header class="full-width-grid-con real-header">
         <h2 class="hidden">Header</h2>
         <div id="logo" class="col-start-2 col-end-2">
             <a href="index.html">
@@ -34,8 +35,9 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="history.html">History</a></li>
+            <li><a href="news.html">News</a></li>
             <li><a href="event.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
             <li><a href="gallery.html" class="see-all-button m-col-start-6 m-col-end-8">Donate Now</a></li>
         </nav>
         <!-- Mobile Menu -->
@@ -48,13 +50,15 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="history.html">History</a></li>
+                    <li><a href="news.html">News</a></li>
                     <li><a href="event.html">Events</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                     <li><a href="gallery.html" class="see-all-button m-col-start-6 m-col-end-8">Donate Now</a></li>
                 </ul>
             </div>
         </div>
     </header>
+</div>
     <main>
         <section class="grid-con" id="hero">
             <div id="hero-left" class="col-span-full m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5 ">
@@ -183,26 +187,26 @@
 
 
     </main>
-
-        <footer class="full-width-grid-con" id="site-footer">
-            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12" id="footer-logo">
+    <div id="site-footer">
+        <footer class="grid-con" >
+            <div class="col-span-4 m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5" id="footer-logo">
                 <a href="index.html">
                     <img src="images/BIA_LOGO_COLOUR.png" alt="Logo">
                 </a>
             </div>
     
-            <div class="grid-con" id="footer-content">
-                <div class="col-span-2 m-col-span-4 l-col-span-4 xl-col-span-4 footer-container"
+       
+                <div class="col-span-2 m-col-start-1 m-col-end-5  footer-container"
                     id="footer-nav-main-container">
                     <ul id="footer-nav-main">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="history.html">History</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
     
-                <div class="col-span-2 m-col-span-4 l-col-span-4 xl-col-span-4 footer-container"
+                <div class="col-span-2 m-col-start-6 m-col-end-9 footer-container"
                     id="footer-nav-secondary-container">
                     <ul id="footer-nav-secondary">
                         <li><a href="*">Terms & Conditions</a></li>
@@ -221,8 +225,9 @@
                         </form>
                     </div>
                 </div>
-            </div>
+         
         </footer>
+    </div>
 
 </body>
 
