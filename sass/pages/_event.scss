@@ -38,40 +38,49 @@ h3 {
 .event-info {
     align-items: start;
     gap: 2rem;
-  }
-  
-  .event-poster img {
+}
+
+.event-poster img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  }
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
 
-  .description {
+.description {
     margin-top: 20px;
-  }
+}
 
-  span {
+span {
     color: #701a32;
-  }
+}
 
 
-  .about_event p{
-    margin-top: 20px;    
+.about_event p {
+    margin-top: 20px;
 }
 
 .donation-section {
     margin-top: 20px;
-    
+    padding: 2em;
 }
 
-.donation-section h2{
+#donation-1 {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#donation-2 {
+    background-color: transparent;
+}
+
+.donation-section h2 {
     font-size: 3em;
     text-align: center;
 }
 
-.donation-section p{
+.donation-section p {
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
@@ -81,19 +90,20 @@ h3 {
     padding: 2em 20px;
 }
 
-.gallery-home h2{
+.gallery-home h2 {
     text-align: left !important;
 }
 
-.gallery-home p{
+.gallery-home p {
     margin-bottom: 20px;
 }
 
 
 .gallery-grid {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr); /* Forces 3 images per row */
-     gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Forces 3 images per row */
+    gap: 1em;
 }
 
 .title-ticket {
@@ -125,13 +135,13 @@ h3 {
 }
 
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
 
     h2 {
         margin-top: 20px;
         text-align: center;
         font-size: 2em;
-    
+
     }
 
     .event-poster {
@@ -139,13 +149,14 @@ h3 {
     }
 
 
-    .donation-section{
+    .donation-section {
         display: none;
     }
 
     .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(1, 1fr); /* Forces 3 images per row */
+        grid-template-columns: repeat(1, 1fr);
+        /* Forces 3 images per row */
         gap: 1em;
         margin-top: 20px;
 

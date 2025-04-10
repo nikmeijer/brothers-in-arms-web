@@ -23,8 +23,8 @@
 }
 
 #contact-con {
-
-    margin: 40px 0;
+    display: flex;
+    flex-direction: row;
 }
 
 #contact-text {
@@ -36,16 +36,10 @@
     color: #701a32;
     font-size: 2em;
     text-align: left;
-    padding: 10px 0;
 }
 
 #contact-text p {
     text-align: left;
-    padding: 10px 0;
-}
-
-#contact-text p:first-child {
-    margin-bottom: 1em;
 }
 
 #contact-text h3 {
@@ -56,30 +50,33 @@
 }
 
 #contact-text button {
-    width: fit-content;
-    margin: 10px 0;
-    padding: 10px 20px;
+    background-color: #8B0021;
+    color: white;
+    margin-top: 30px;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
-    border: 2px solid #701a32;
-    background-color: #701a32;
-    color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+    box-shadow: 4px 4px 0px #00000050;
+    transition: 0.3s ease;
+    text-justify: left;
 }
 
 #contact-text button:hover {
-    background-color: #be1e2d;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
-    cursor: pointer;
+    background-color: #6a0019;
+    box-shadow: 2px 2px 0px #00000070;
 }
 
 #contact-text button a {
     font-family: "Open Sans", sans-serif;
     text-decoration: none;
+    font-size: 1em;
     color: #fff;
 }
 
 #contact {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     padding: 2em;
     width: 100%;
@@ -121,25 +118,20 @@
 }
 
 #contact button {
-    width: fit-content;
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1em;
+    background-color: #8B0021;
+    color: white;
+    margin-top: 30px;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
     font-weight: bold;
-    text-align: center;
-    border: 2px solid #701a32;
-    background-color: #701a32;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
-    align-self: flex-start;
+    box-shadow: 4px 4px 0px #00000050;
+    transition: 0.3s ease;
+    text-justify: left;
 }
 
 #contact button:hover {
-    background-color: #be1e2d;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
-    cursor: pointer;
+    background-color: #6a0019;
+    box-shadow: 2px 2px 0px #00000070;
 }
 
 #contact .success-message {
