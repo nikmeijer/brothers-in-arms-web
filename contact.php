@@ -78,7 +78,7 @@
                 <p>Help us achieve our goal of immortalizing those who fought and served in the Great War</p>
                 <h3>$47,894 / $200,000</h3>
                 <p>Raised so far</p>
-                <button><a href="*">Donate Now</a></button>
+                <button><a href="contact.php">Donate Now</a></button>
                 <h2>Give as you Live</h2>
                 <p>We are registered with <a href="https://www.giveasyoulive.com/">Give as you Live.</a> This means we
                     will receive a small donation
@@ -134,7 +134,7 @@
                 <ul id="footer-nav-secondary">
                     <li><a href="*">Terms & Conditions</a></li>
                     <li><a href="*">Sitemap</a></li>
-                    <li><a href="*">Donate</a></li>
+                    <li><a href="contact.php">Donate</a></li>
                 </ul>
             </div>
 
